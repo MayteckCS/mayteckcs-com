@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Mayteck C.S. is a premier IT and AI consulting company. We provide innovative technology solutions to help businesses transform their operations, enhance productivity, and achieve digital excellence. Our team of experts specializes in artificial intelligence, cloud computing, cybersecurity, and digital transformation." />
+	<meta name="keywords" content="IT consulting, AI solutions, digital transformation, cloud computing, cybersecurity, machine learning, data analytics, business intelligence, technology consulting, enterprise solutions" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mayteck C.S. - IT and AI Consulting</title>
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600&family=Raleway:wght@700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+<header id="header">
+  <div class="header-container">
+    <div class="logo-container">
+      <img src="images/MayteckCS_logo.png" alt="Mayteck C.S. Logo">
+      <div class="company-name">
+        <h1>Mayteck C.S.</h1>
+        <h2>Expert IT & AI Solutions for Local Businesses!</h2>
+        <p>Your trusted partner for strategic AI consulting, web support, and digital growth.</p>
+      </div>
+    </div>
+    <button class="mobile-menu-toggle" aria-label="Toggle Menu">☰</button>
+  <ul class="nav-menu" id="siteNavigation">
+    <li><a href="index.html#home">Home</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="agents_index.html">Meet the Team</a></li>
+    <li><a href="brand-architect-tool.html">Brand Builder Tool</a></li>
+	    <li class="dropdown">
+      <a href="pricing.html">Pricing &#9662;</a>
+      <ul class="dropdown-menu">
+        <li><a href="premium_website.html">Premium Website Package</a></li>
+        <li><a href="standard_business.html">Business Standard Website</a></li>
+        <li><a href="starter_website.html">Starter Website Package</a></li>
+        <li><a href="beyond.html">Beyond the Build (Add-Ons)</a></li>
+      </ul>
+    </li>
+  </ul>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (menuToggle && navMenu) {
+      menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+      });
+
+      const navLinks = document.querySelectorAll('.nav-menu a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          if (!link.parentElement.classList.contains('dropdown') && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+          }
+        });
+      });
+
+      const dropdownToggles = document.querySelectorAll('.nav-menu .dropdown > a');
+      dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            const parentDropdown = this.parentElement;
+            parentDropdown.classList.toggle('open');
+          }
+        });
+      });
+    }
+  });
+</script>
+
+<table width="90%" border="0" align="center" cellspacing="0" cellpadding="0" class="tableWidth">
+<tr class="blak">
+<td>
+	<table width="100%" border="0" align="center" cellspacing="1" cellpadding="0">
+	<tr>
+	<td colspan="6"> 
+		<table width="100%" border="0" align="center" cellspacing="0" cellpadding="10">
+		<tr> 
+		<td id="pageContent"> 
+<!-- ==================== End prologue ==================== -->
+
+<section id="home" style="padding-top: 80px;">
+	    <div class="blue-tagline" style="text-align: center; margin: 0 auto 40px; max-width: 90%;">
+	        <video id="headerVideo" autoplay muted playsinline style="max-width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);">
+	            <source src="images/MayteckCStitle.mp4" type="video/mp4">
+	            Your browser does not support the video tag.
+	        </video>
+	        <script>
+	            document.addEventListener('DOMContentLoaded', function() {
+	                const video = document.getElementById('headerVideo');
+	                let hasPlayedOnce = false;
+	                
+	                video.addEventListener('timeupdate', function() {
+	                    // If we've reached the end of the video for the first time
+	                    if (!hasPlayedOnce && video.currentTime >= video.duration - 0.1) {
+	                        hasPlayedOnce = true;
+	                        // Set the currentTime to 1 second before the end
+	                        video.currentTime = video.duration - 1.0;
+	                    }
+	                });
+	                
+	                video.addEventListener('ended', function() {
+	                    // If we've already played once, loop the last second
+	                    if (hasPlayedOnce) {
+	                        video.currentTime = video.duration - 1.0;
+	                        video.play();
+	                    }
+	                });
+	            });
+	        </script>
+	    </div>
+    </section>
+	
+</section>
+<main>
+    <img src="images/casey.png" alt="Casey" class="agent-image">
+    <div class="agent-title">Casey</div>
+    <div class="agent-role">SEO & Visibility Specialist</div>
+    <p class="agent-desc">Casey lives in the metadata. From keyword research to site indexing, they ensure your business actually shows up where it matters — search engines, maps, and local directories.</p>
+    <p class="agent-desc">With quiet precision and proven strategies, Casey helps small businesses move from invisible to undeniable — one ranking at a time.</p>
+    <br>
+    <a href="https://mayteckcs.com" style="color: #64ffda;">← Back to Mayteck C.S.</a>
+</main>
+
+<footer id="footer">
+    <p>&copy; 2025 Mayteck C.S. - All Rights Reserved | Empowering Business Through Technology</p>
+</footer>
+
+<script>
+    // Simple JavaScript for mobile menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        menuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+            });
+        });
+    });
+</script>
+
+</body>
+
+</html>

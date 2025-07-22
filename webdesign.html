@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Design Packages - Mayteck C.S.</title>
+  <link rel="stylesheet" href="style.css"> <!-- Changed from styles.css to style.css -->
+  <!-- Removed inline <style> blocks -->
+</head>
+<body>
+  <!-- Intersection Observer script for fade-in animations -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const faders = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      faders.forEach(fade => observer.observe(fade));
+    });
+  </script>
+
+<header id="header">
+  <div class="header-container">
+    <div class="logo-container">
+      <img src="images/MayteckCS_logo.png" alt="Mayteck C.S. Logo">
+      <div class="company-name">
+        <h1>Mayteck C.S.</h1>
+        <h2>Expert IT & AI Solutions for Local Businesses!</h2>
+        <p>Your trusted partner for strategic AI consulting, web support, and digital growth.</p>
+      </div>
+    </div>
+    <button class="mobile-menu-toggle" aria-label="Toggle Menu">☰</button>
+  <ul class="nav-menu" id="siteNavigation">
+    <li><a href="index.html#home">Home</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="agents_index.html">Meet the Team</a></li>
+    <li><a href="brand-architect-tool.html">Brand Builder Tool</a></li>
+	    <li class="dropdown">
+      <a href="pricing.html">Pricing &#9662;</a>
+      <ul class="dropdown-menu">
+        <li><a href="premium_website.html">Premium Website Package</a></li>
+        <li><a href="standard_business.html">Business Standard Website</a></li>
+        <li><a href="starter_website.html">Starter Website Package</a></li>
+        <li><a href="beyond.html">Beyond the Build (Add-Ons)</a></li>
+      </ul>
+    </li>
+  </ul>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (menuToggle && navMenu) {
+      menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+      });
+
+      const navLinks = document.querySelectorAll('.nav-menu a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          if (!link.parentElement.classList.contains('dropdown') && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+          }
+        });
+      });
+
+      const dropdownToggles = document.querySelectorAll('.nav-menu .dropdown > a');
+      dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            const parentDropdown = this.parentElement;
+            parentDropdown.classList.toggle('open');
+          }
+        });
+      });
+    }
+  });
+</script>
+  
+
+<section id="web-packages">
+  <div class="page-intro-box"> <!-- Replaced inline styled div with a class -->
+    <h3>Website Design Packages</h3> <!-- Removed inline styles -->
+    <p>
+      Professional, affordable, and tailored for local business owners—our websites are designed to look sharp, convert well, and set you up for future success.
+    </p> <!-- Removed inline styles -->
+  </div>
+    
+    <!-- Standard Package -->
+    <div class="service-container fade-in">
+      <div class="service-image-cell">
+        <img src="images/ai_robot_typing.webp" alt="Standard Website Package">
+      </div>
+      <div class="service-content-cell">
+        <h4>🛠 Standard Business Site – $1,500–$2,500</h4>
+        <p>Great for small businesses needing a clean, professional site without going overboard.</p>
+        <ul>
+          <li>Premium template (WordPress, Squarespace, Webflow, etc.)</li>
+          <li>Logo integration, brand color & font matching</li>
+          <li>Up to 4 core pages (Home, About, Services, Contact)</li>
+          <li>Mobile-responsive design</li>
+          <li>Basic SEO setup (titles, descriptions)</li>
+          <li>Contact forms, map, and optional basic blog/news section</li>
+        </ul>
+      </div>
+    </div> <!-- Corrected extra closing div from original -->
+
+    <!-- Premium Package -->
+    <div class="service-container image-right fade-in">
+      <div class="service-image-cell">
+        <img src="images/advanced-technology-display.jpg" alt="Premium Website Package">
+      </div>
+      <div class="service-content-cell">
+        <h4>🚀 Premium Website Package – $3,000–$5,000</h4>
+        <p>Ideal for businesses ready to scale and showcase advanced features with a stronger SEO and conversion strategy.</p>
+        <ul>
+          <li>Everything in the Standard Package, plus:</li>
+          <li>Deeper layout customization & UI animations</li>
+          <li>Advanced features: booking, chat bot, or basic e-commerce</li>
+          <li>Expanded SEO (alt tags, speed optimization, metadata)</li>
+          <li>Copywriting assistance or professional content polish</li>
+          <li>Multiple revision rounds for polish</li>
+          <li>Training for you or your team on content edits</li>
+          <li>CRM/newsletter/calendar tool integrations</li>
+        </ul>
+        <p class="fine-print">*Limited-time offer for select Huntington Beach area businesses</p> <!-- Added class -->
+      </div>
+    </div>
+
+    <!-- Optional Add-Ons -->
+    <div class="service-container fade-in"> <!-- Added fade-in for consistency -->
+      <div class="service-image-cell">
+        <img src="images/curcuitboard_green.jpg" alt="Optional Add-Ons">
+      </div>
+      <div class="service-content-cell">
+        <h4>🔧 Optional Add-Ons (extra cost)</h4>
+        <ul> <!-- Removed inline style, will be handled by #web-packages .service-content-cell ul -->
+          <li>Custom photography or licensed stock imagery</li>
+          <li>Logo design or complete visual rebranding</li>
+          <li>Website hosting, maintenance, and tech support plan</li>
+          <li>Professional email setup and migration assistance</li>
+          <li>Ongoing or advanced SEO content strategy</li>
+        </ul>
+      </div>
+    </div>
+
+<!-- CTA Section -->
+<div class="fade-in cta-section-box"> <!-- Replaced inline styled div with classes -->
+  <a href="index.html#contact" class="cta-button cta-button-small">Let’s Get Started</a> <!-- Changed href, added modifier class -->
+</div>
+</section>
+
+<footer id="footer"> <!-- Added ID, removed inline styles -->
+  <p>© 2025 Mayteck C.S. - Empowering Business Through Technology</p>
+</footer>
+</body>
+</html>

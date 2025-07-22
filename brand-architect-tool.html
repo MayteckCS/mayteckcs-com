@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Use Mayteck C.S.'s Brand Identity Architect powered by AI to develop your business branding. Summarize its content for search engines. Consider using 'Local' or 'Local Business' where appropriate, alongside specific city/region mentions." />
+<meta name="keywords" content="brand identity, architect, AI, artificial intelligence, branding, logo design, color palette, local business, local IT, local AI" />
+<title>Brand Identity Architect - Mayteck C.S.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600&family=Raleway:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<body>
+<header id="header">
+  <div class="header-container">
+    <div class="logo-container">
+      <img src="images/MayteckCS_logo.png" alt="Mayteck C.S. Logo">
+      <div class="company-name">
+        <h1>Mayteck C.S.</h1>
+        <h2>Expert IT & AI Solutions for Local Businesses!</h2>
+        <p>Your trusted partner for strategic AI consulting, web support, and digital growth.</p>
+      </div>
+    </div>
+    <button class="mobile-menu-toggle" aria-label="Toggle Menu">☰</button>
+  <ul class="nav-menu" id="siteNavigation">
+    <li><a href="index.html#home">Home</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="agents_index.html">Meet the Team</a></li>
+    <li><a href="brand-architect-tool.html">Brand Builder Tool</a></li>
+	    <li class="dropdown">
+      <a href="pricing.html">Pricing &#9662;</a>
+      <ul class="dropdown-menu">
+        <li><a href="premium_website.html">Premium Website Package</a></li>
+        <li><a href="standard_business.html">Business Standard Website</a></li>
+        <li><a href="starter_website.html">Starter Website Package</a></li>
+        <li><a href="beyond.html">Beyond the Build (Add-Ons)</a></li>
+      </ul>
+    </li>
+  </ul>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (menuToggle && navMenu) {
+      menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+      });
+
+      const navLinks = document.querySelectorAll('.nav-menu a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          if (!link.parentElement.classList.contains('dropdown') && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+          }
+        });
+      });
+
+      const dropdownToggles = document.querySelectorAll('.nav-menu .dropdown > a');
+      dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            const parentDropdown = this.parentElement;
+            parentDropdown.classList.toggle('open');
+          }
+        });
+      });
+    }
+  });
+</script>
+
+	<table width="90%" border="0" align="center" cellspacing="0" cellpadding="0" class="tableWidth">
+		<tr class="blak">
+			<td>
+				<table width="100%" border="0" align="center" cellspacing="1" cellpadding="0">
+					<tr>
+						<td colspan="6">
+							<table width="100%" border="0" align="center" cellspacing="0" cellpadding="10">
+								<tr>
+									<td id="pageContent">
+										<section id="main-content-section" style="min-height: 800px; display: flex; flex-direction: column;">
+											<iframe
+												src="https://studio--brand-identity-architect.us-central1.hosted.app/"
+												style="flex-grow: 1; border: none; width: 100%; height: 100%;"
+												title="Brand Identity Architect Powered by AI"
+												allowfullscreen
+											>
+												Your browser does not support iframes. Please visit the Brand Identity Architect directly at: <a href="https://studio--brand-identity-architect.us-central1.hosted.app/" target="_blank">Brand Identity Architect</a>
+											</iframe>
+										</section>
+
+										</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+	<footer id="footer">
+		<p>© 2025 Mayteck C.S. - All Rights Reserved | Empowering Business Through Technology</p>
+	</footer>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const menuToggle = document.querySelector('.mobile-menu-toggle');
+			const navMenu = document.querySelector('.nav-menu');
+
+			if (menuToggle && navMenu) {
+				menuToggle.addEventListener('click', function () {
+					navMenu.classList.toggle('active');
+				});
+
+				const navLinks = document.querySelectorAll('.nav-menu a');
+				navLinks.forEach(link => {
+					link.addEventListener('click', function () {
+						// Only close if it's a direct link, not a dropdown toggle
+						if (!link.parentElement.classList.contains('dropdown') && navMenu.classList.contains('active')) {
+							navMenu.classList.remove('active');
+						}
+					});
+				});
+
+				// Handle dropdown toggling for mobile if it's a clickable element
+				const dropdownToggles = document.querySelectorAll('.nav-menu .dropdown > a');
+				dropdownToggles.forEach(toggle => {
+					toggle.addEventListener('click', function (e) {
+						// Prevent default link behavior if it's meant to open a dropdown
+						if (window.innerWidth <= 768) { // Only for mobile/tablet screen sizes
+							e.preventDefault();
+							const parentDropdown = this.parentElement;
+							parentDropdown.classList.toggle('open');
+						}
+					});
+				});
+			}
+		});
+	</script>
+	</body>
+
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Mayteck C.S. is a premier IT and AI consulting company. We provide innovative technology solutions to help businesses transform their operations, enhance productivity, and achieve digital excellence. Our team of experts specializes in artificial intelligence, cloud computing, cybersecurity, and digital transformation." />
+	<meta name="keywords" content="IT consulting, AI solutions, digital transformation, cloud computing, cybersecurity, machine learning, data analytics, business intelligence, technology consulting, enterprise solutions" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mayteck C.S. - IT and AI Consulting</title>
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600&family=Raleway:wght@700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+<header id="header">
+  <div class="header-container">
+    <div class="logo-container">
+      <img src="images/MayteckCS_logo.png" alt="Mayteck C.S. Logo">
+      <div class="company-name">
+        <h1>Mayteck C.S.</h1>
+        <h2>Expert IT & AI Solutions for Local Businesses!</h2>
+        <p>Your trusted partner for strategic AI consulting, web support, and digital growth.</p>
+      </div>
+    </div>
+    <button class="mobile-menu-toggle" aria-label="Toggle Menu">☰</button>
+  <ul class="nav-menu" id="siteNavigation">
+    <li><a href="index.html#home">Home</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="agents_index.html">Meet the Team</a></li>
+    <li><a href="brand-architect-tool.html">Brand Builder Tool</a></li>
+	    <li class="dropdown">
+      <a href="pricing.html">Pricing &#9662;</a>
+      <ul class="dropdown-menu">
+        <li><a href="premium_website.html">Premium Website Package</a></li>
+        <li><a href="standard_business.html">Business Standard Website</a></li>
+        <li><a href="starter_website.html">Starter Website Package</a></li>
+        <li><a href="beyond.html">Beyond the Build (Add-Ons)</a></li>
+      </ul>
+    </li>
+  </ul>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (menuToggle && navMenu) {
+      menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+      });
+
+      const navLinks = document.querySelectorAll('.nav-menu a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          if (!link.parentElement.classList.contains('dropdown') && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+          }
+        });
+      });
+
+      const dropdownToggles = document.querySelectorAll('.nav-menu .dropdown > a');
+      dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            const parentDropdown = this.parentElement;
+            parentDropdown.classList.toggle('open');
+          }
+        });
+      });
+    }
+  });
+</script>
+
+
+
+
+<table width="90%" border="0" align="center" cellspacing="0" cellpadding="0" class="tableWidth">
+<tr class="blak">
+<td>
+	<table width="100%" border="0" align="center" cellspacing="1" cellpadding="0">
+	<tr>
+	<td colspan="6"> 
+		<table width="100%" border="0" align="center" cellspacing="0" cellpadding="10">
+		<tr> 
+		<td id="pageContent"> 
+<!-- ==================== End prologue ==================== -->
+
+<section id="home" style="padding-top: 80px;">
+	    <div class="blue-tagline" style="text-align: center; margin: 0 auto 40px; max-width: 90%;">
+	        <video id="headerVideo" autoplay muted playsinline style="max-width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);">
+	            <source src="images/MayteckCStitle.mp4" type="video/mp4">
+	            Your browser does not support the video tag.
+	        </video>
+	        <script>
+	            document.addEventListener('DOMContentLoaded', function() {
+	                const video = document.getElementById('headerVideo');
+	                let hasPlayedOnce = false;
+	                
+	                video.addEventListener('timeupdate', function() {
+	                    // If we've reached the end of the video for the first time
+	                    if (!hasPlayedOnce && video.currentTime >= video.duration - 0.1) {
+	                        hasPlayedOnce = true;
+	                        // Set the currentTime to 1 second before the end
+	                        video.currentTime = video.duration - 1.0;
+	                    }
+	                });
+	                
+	                video.addEventListener('ended', function() {
+	                    // If we've already played once, loop the last second
+	                    if (hasPlayedOnce) {
+	                        video.currentTime = video.duration - 1.0;
+	                        video.play();
+	                    }
+	                });
+	            });
+	        </script>
+	    </div>
+    </section>
+	
+</section>
+
+<section id="services">
+	<div class="section-title">
+		<h3>Our Services</h3>
+	</div>
+	<p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">At Mayteck C.S., we provide comprehensive <b>IT support and AI consulting services in Huntington Beach</b> to help local businesses navigate the complex digital landscape. Our team of experts delivers innovative technology solutions tailored to your specific needs, empowering them to transform their operations and achieve digital excellence.</p>
+	    
+	    <!-- First service item - AI Implementation -->
+	    <div class="service-container">
+		    <div class="service-image-cell">
+			    <img src="images/ai_robot_coding.jpg" alt="AI Implementation">
+		    </div>
+		    <div class="service-content-cell">
+			    <h4>AI Implementation</h4>
+		   		 	<p>Harness the power of artificial intelligence to automate processes, gain insights from data, and create intelligent systems that drive business growth for <b>Local businesses</b>. Our <b>AI consulting</b> experts work closely with your team to identify opportunities for <b>AI implementation</b> and develop custom <b>AI solutions</b> that deliver measurable results.</p>
+		   		 	<p>From <b>machine learning</b> algorithms to <b>natural language processing</b> and <b>computer vision</b>, we implement cutting-edge <b>AI technologies</b> that give your <b>local business</b> a competitive edge.</p>
+			</div>
+	    </div>
+	    
+	    <!-- Second service item - Cloud Solutions -->
+	    <div class="service-container image-right">
+		    <div class="service-image-cell">
+			    <img src="images/server_corridor_infinite.jpg" alt="Cloud Solutions">
+		    </div>
+		    <div class="service-content-cell">
+				<h4>Cloud Solutions</h4>
+		    <p>Migrate your on-premise services to the cloud seamlessly with our expert guidance on <b>cloud computing</b>. We help you select the right <b>cloud infrastructure</b> (public, private, or hybrid) and optimize your applications for maximum performance, scalability, and cost-efficiency.</p>
+		    <p>Our team ensures a smooth <b>cloud migration</b> with minimal disruption to your business operations! We provide ongoing <b>cloud support</b> to help you leverage the full potential of <b>cloud Services.</b></p>		    </div>
+	    </div>
+	    
+	    <!-- Third service item - Cybersecurity -->
+	    <div class="service-container">
+		    <div class="service-image-cell">
+			    <img src="images/cyberpunk_circuit_engraving.jpg" alt="Cybersecurity">
+		    </div>
+		    <div class="service-content-cell">
+    <h4>Cybersecurity for Local Businesses</h4>
+    <p>Protect your digital assets with our comprehensive <b>cybersecurity solutions</b>. We identify vulnerabilities, implement robust <b>IT security</b> measures, and ensure compliance with regulations to safeguard your business against evolving <b>cyber threats.</b></p>
+    <p>Our <b>cybersecurity experts</b> conduct thorough security assessments for local businesses, develop tailored security strategies, and provide continuous monitoring to detect and respond to potential threats before they impact your <b>local business.</b></p>
+    
+    <!-- Embed YouTube Video Here -->
+    <div style="margin-top: 20px; text-align: center;">
+        <iframe width="720" height="480" src="https://www.youtube.com/embed/wUZ-4PDz_GE" 
+        title="Cybersecurity Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+        encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen 
+        style="max-width: 100%; border-radius: 8px; box-shadow: 0 8px 16px rgba(0,0,0,0.6);">
+        </iframe>
+    </div>
+</div>
+		</div>
+	    
+	    <!-- Fourth service item - Digital Transformation -->
+	    <div class="service-container image-right">
+		    <div class="service-image-cell">
+			    <img src="images/market_data_hub.jpg" alt="Digital Transformation">
+		    </div>
+		    <div class="service-content-cell">
+				<h4>Digital Transformation for Local Companies</h4>
+		    <p>Embark on a digital transformation journey with our strategic guidance. We help you leverage technology to reimagine your business processes and enhance customer experiences in the digital age, leading to increased efficiency and innovation.</p>
+		    <p>Our holistic approach encompasses people, processes, and technology to drive meaningful change across your entire organization. We work with you to develop a roadmap for digital transformation that aligns with your business objectives and delivers sustainable growth in the local market.</p>		    </div>
+	    </div>
+    </section>
+	
+	<hr>
+	
+	<section id="about">
+	    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin: 20px 0;">
+		    <div style="flex: 0 0 48%;">
+			    <h3>Why Choose Us</h3>
+			    <img src="images/sunlit_modern_workspace.jpg" alt="Team Meeting" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
+				<ul style="list-style-type: none; padding-left: 0;">
+				    <li style="margin-bottom: 10px; padding-left: 25px; background: url(images/glowing_circuit_paths.jpg) no-repeat left center; background-size: 20px;">Expert team with industry experience in IT and AI consulting for local businesses</li>
+				    <li style="margin-bottom: 10px; padding-left: 25px; background: url(images/glowing_circuit_paths.jpg) no-repeat left center; background-size: 20px;">Customized IT solutions and AI solutions tailored for your specific business needs in Huntington Beach and surrounding areas</li>
+				    <li style="margin-bottom: 10px; padding-left: 25px; background: url(images/glowing_circuit_paths.jpg) no-repeat left center; background-size: 20px;">Cutting-edge technology implementation, including the latest in artificial intelligence, cloud services, and cybersecurity</li>
+				    <li style="margin-bottom: 10px; padding-left: 25px; background: url(images/glowing_circuit_paths.jpg) no-repeat left center; background-size: 20px;">Ongoing IT support, AI maintenance, and optimization!</li>
+			    </ul>
+		    </div>
+		    
+		    <div style="flex: 0 0 48%;">
+			    <h3>Our Infrastructure</h3>
+			    <img src="images/futuristic_server_room.jpg" alt="Server Infrastructure" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
+			    <p>We utilize state-of-the-art technology infrastructure to deliver high-performance solutions. Our data centers are equipped with the latest hardware and software to ensure reliability, security, and scalability for your business applications.</p>
+			    <p>With our robust infrastructure, we can handle projects of any size and complexity, from small business implementations to enterprise-level deployments.</p>
+		    </div>
+	    </div>
+	    
+	    <div class="section-title">
+	        <h3>Our Approach</h3>
+	    </div>
+	    <div class="approach-container">
+			    <div class="approach-item">
+				    <img src="images/glowing_curcuit_path.jpg" alt="Discovery" style="width: 100%; border-radius: 5px; margin-bottom: 10px;">
+				    <h4>1. Discovery</h4>
+				    <p>We begin by understanding your business goals, challenges, and requirements to create a tailored solution.</p>
+
+		    </div>
+		    <div class="approach-item">
+			    <img src="images/curcuitboard_green.jpg" alt="Strategy" style="width: 100%; border-radius: 5px; margin-bottom: 10px;">
+			    <h4>2. Strategy</h4>
+			    <p>Our experts develop a comprehensive strategy that aligns technology solutions with your business objectives.</p>
+		    </div>
+		    
+		    <div class="approach-item">
+			    <img src="images/network_rack.jpg" alt="Implementation" style="width: 100%; border-radius: 5px; margin-bottom: 10px;">
+			    <h4>3. Implementation</h4>
+			    <p>We execute the strategy with precision, ensuring minimal disruption to your business operations.</p>
+		    </div>
+		    
+		    <div class="approach-item">
+			    <img src="images/data_center_corridor.jpg" alt="Support" style="width: 100%; border-radius: 5px; margin-bottom: 10px;">
+			    <h4>4. Support</h4>
+			    <p>Our relationship continues with ongoing support, maintenance, and optimization of your technology solutions.</p>
+		    </div>
+	    </div>
+    </section>
+	
+	<hr>
+	
+	<section id="contact">
+	    <div class="section-title">
+	        <h3>Contact Us</h3>
+	    </div>
+	    <div class="contact-container">
+		    <div class="contact-content">
+			    <div class="contact-info">
+					<p>Ready to transform your business with innovative IT and AI solutions? Contact our team of experts today to schedule a consultation.</p>
+				    <p><strong>Email:</strong> info@mayteckcs.com</p>
+				    <p><strong>Phone:</strong> (714) 465-4690</p>
+				    <p><strong>Address:</strong> Huntington Beach, CA 92649 - Your local IT & AI support partner!</p>
+			    </div>
+			    
+			    <div class="contact-image">
+				    <img src="images/modern_office.jpg" alt="Contact Us">
+			    </div>
+		    </div>
+	    </div>
+    </section>
+
+<!-- ==================== Start epilogue ==================== -->
+		</td>
+		</tr>
+		</table>
+	</td>
+	</tr>
+	</table>
+</td>
+</tr>
+</table>
+
+<footer id="footer">
+    <p>&copy; 2025 Mayteck C.S. - All Rights Reserved | Empowering Business Through Technology</p>
+</footer>
+
+<!-- ADD TO BOTTOM JUST BEFORE </body> -- Mobile menu script (kept the more comprehensive one) -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (menuToggle && navMenu) {
+      menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+      });
+
+      const navLinks = document.querySelectorAll('.nav-menu a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          if (navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+          }
+        });
+      });
+    }
+  });
+</script>
+
+
+
+</body>
+
+</html>

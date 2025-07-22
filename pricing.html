@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Design Packages - Mayteck C.S.</title>
+  <meta name="description" content="Explore Mayteck C.S.'s professional website design packages: Starter, Standard, and Premium. Find the perfect solution for your business growth in Huntington Beach, with links to detailed features, pricing, and monthly services." />
+  <meta name="keywords" content="website design packages, starter website, standard business website, premium website package, web design pricing, affordable websites, custom web development, Huntington Beach web design" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+</head>
+<body>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const faders = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      faders.forEach(fade => observer.observe(fade));
+    });
+  </script>
+
+<header id="header">
+  <div class="header-container">
+    <div class="logo-container">
+      <img src="images/MayteckCS_logo.png" alt="Mayteck C.S. Logo">
+      <div class="company-name">
+        <h1>Mayteck C.S.</h1>
+        <h2>Expert IT & AI Solutions for Local Businesses!</h2>
+        <p>Your trusted partner for strategic AI consulting, web support, and digital growth.</p>
+      </div>
+    </div>
+    <button class="mobile-menu-toggle" aria-label="Toggle Menu">☰</button>
+  <ul class="nav-menu" id="siteNavigation">
+    <li><a href="index.html#home">Home</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="agents_index.html">Meet the Team</a></li>
+    <li><a href="brand-architect-tool.html">Brand Builder Tool</a></li>
+	    <li class="dropdown">
+      <a href="pricing.html">Pricing &#9662;</a>
+      <ul class="dropdown-menu">
+        <li><a href="premium_website.html">Premium Website Package</a></li>
+        <li><a href="standard_business.html">Business Standard Website</a></li>
+        <li><a href="starter_website.html">Starter Website Package</a></li>
+        <li><a href="beyond.html">Beyond the Build (Add-Ons)</a></li>
+      </ul>
+    </li>
+  </ul>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (menuToggle && navMenu) {
+      menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+      });
+
+      const navLinks = document.querySelectorAll('.nav-menu a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          if (!link.parentElement.classList.contains('dropdown') && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+          }
+        });
+      });
+
+      const dropdownToggles = document.querySelectorAll('.nav-menu .dropdown > a');
+      dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+          e.preventDefault(); // <- Always prevent default
+          const parentDropdown = this.parentElement;
+          parentDropdown.classList.toggle('open');
+        });
+      });
+    }
+  });
+</script>
+
+
+
+
+
+<section id="web-packages">
+  <div class="page-intro-box">
+    <h1>Website Design Packages</h1>
+    <p>
+      Professional, affordable, and tailored for local business owners—our websites are designed to look sharp, convert well, and set you up for future success. Below is an overview of our core packages; click to learn more about each in detail.
+    </p>
+  </div>
+    
+    <hr>
+
+    <div class="section-title">
+        <h2>Our Core Website Packages</h2>
+    </div>
+    <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">Choose the package that best fits your business needs and goals. Each package is designed with scalability and performance in mind.</p>
+
+    <div class="service-container fade-in">
+      <div class="service-image-cell">
+        <img src="images/starter_placeholder.jpg" alt="Starter Website Package Overview">
+      </div>
+      <div class="service-content-cell">
+        <h4>✨ Starter Website – $1,000</h4>
+        <p>Perfect for solo owners or local businesses just starting out. Get a professional, impactful online presence quickly and affordably.</p>
+        <ul>
+          <li>1-page site with scrollable sections (About, Services, Contact, etc.)</li>
+          <li>Mobile-optimized, fast-loading design</li>
+          <li>Clean layout with client branding</li>
+          <li>Basic SEO (meta title & description)</li>
+        </ul>
+        <a href="starter_website.html" class="cta-button cta-button-small">Learn More about the Starter Package</a>
+      </div>
+    </div>
+
+    <div class="service-container image-right fade-in">
+      <div class="service-image-cell">
+        <img src="images/ai_robot_typing.webp" alt="Standard Business Site Package Overview">
+      </div>
+      <div class="service-content-cell">
+        <h4>🛠 Standard Business Site – $1,500–$2,500</h4>
+        <p>Great for growing businesses that need more space and style. Establish a robust digital footprint with comprehensive information.</p>
+        <ul>
+          <li>Includes everything in Starter, plus:</li>
+          <li>Up to 4 custom-designed pages (Home, About, Services, Contact)</li>
+          <li>Contact forms, map, click-to-call</li>
+          <li>Mobile-friendly, branded template (WordPress, Webflow, Squarespace, etc.)</li>
+          <li>Basic blog/news section (optional)</li>
+          <li>On-page SEO setup</li>
+        </ul>
+        <a href="standard_business.html" class="cta-button cta-button-small">View Standard Package Details</a>
+      </div>
+    </div>
+
+    <div class="service-container fade-in">
+      <div class="service-image-cell">
+        <img src="images/advanced-technology-display.jpg" alt="Premium Website Package Overview">
+      </div>
+      <div class="service-content-cell">
+        <h4>🚀 Premium Website Package – $3,000–$5,000</h4>
+        <p>Ideal for serious businesses that want to grow, rank higher, and impress online with cutting-edge features and advanced strategies.</p>
+        <ul>
+          <li>Includes everything in Standard, plus:</li>
+          <li>Advanced layout customization with animations or interactive features</li>
+          <li>3 short custom videos (banners, backgrounds, etc.)</li>
+          <li>SEO boost (image alt tags, loading speed, advanced metadata)</li>
+          <li>Copywriting or content polishing help</li>
+          <li>Multiple revision rounds & training on site updates</li>
+          <li>CRM, newsletter, or calendar tool integration</li>
+          <li>Blog or multi-location support</li>
+        </ul>
+        <a href="premium_website.html" class="cta-button cta-button-small">Discover Premium Package Features</a>
+        <p class="fine-print">*Limited-time offer for select Huntington Beach area businesses</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="section-title">
+        <h2>Beyond the Build: Customization & Care</h2>
+    </div>
+    <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">Enhance your website and ensure its long-term success with our specialized one-time add-ons and crucial monthly services.</p>
+
+    <div class="service-container image-right fade-in">
+      <div class="service-image-cell">
+        <img src="images/curcuitboard_green.jpg" alt="Optional Website Add-Ons and Monthly Services">
+      </div>
+      <div class="service-content-cell">
+        <h4>🔧 Optional Enhancements & Monthly Services</h4>
+        <p>From custom branding to ongoing SEO, these services provide the extra edge and continuous support your business needs to thrive online.</p>
+        <ul>
+          <li>Logo design or complete visual rebranding</li>
+          <li>Custom photography & video content creation</li>
+          <li>Website hosting & dedicated tech support plans</li>
+          <li>Professional email setup & domain migration assistance</li>
+          <li>Ongoing Monthly SEO & Digital Growth Strategy</li>
+          <li>Advanced forms, CRM integrations, and E-commerce solutions</li>
+        </ul>
+        <a href="beyond.html" class="cta-button cta-button-small">View All Add-Ons & Monthly Services</a>
+      </div>
+    </div>
+
+<div class="fade-in cta-section-box">
+  <h4>Ready to build your dream website?</h4>
+  <p>Let's connect and discuss how Mayteck C.S. can bring your vision to life.</p>
+  <a href="index.html#contact" class="cta-button">Get a Free Consultation</a>
+</div>
+</section>
+
+<footer id="footer">
+  <p>© 2025 Mayteck C.S. - Empowering Business Through Technology</p>
+</footer>
+</body>
+</html>

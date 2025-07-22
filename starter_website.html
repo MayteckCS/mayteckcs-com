@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Mayteck C.S. Starter Website Package: Perfect for solo owners and local businesses. Get a professional, mobile-optimized 1-page site with basic SEO. Includes design, launch, and optional hosting & monthly SEO. Learn about our process and what's included." />
+	<meta name="keywords" content="starter website, local business website, solo owner website, 1-page website, basic SEO, mobile optimized website, web design Huntington Beach, affordable website" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mayteck C.S. - Starter Website Package</title>
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600&family=Raleway:wght@700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<header id="header">
+  <div class="header-container">
+    <div class="logo-container">
+      <img src="images/MayteckCS_logo.png" alt="Mayteck C.S. Logo">
+      <div class="company-name">
+        <h1>Mayteck C.S.</h1>
+        <h2>Expert IT & AI Solutions for Local Businesses!</h2>
+        <p>Your trusted partner for strategic AI consulting, web support, and digital growth.</p>
+      </div>
+    </div>
+    <button class="mobile-menu-toggle" aria-label="Toggle Menu">☰</button>
+  <ul class="nav-menu" id="siteNavigation">
+    <li><a href="index.html#home">Home</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="agents_index.html">Meet the Team</a></li>
+    <li><a href="brand-architect-tool.html">Brand Builder Tool</a></li>
+	    <li class="dropdown">
+      <a href="pricing.html">Pricing &#9662;</a>
+      <ul class="dropdown-menu">
+        <li><a href="premium_website.html">Premium Website Package</a></li>
+        <li><a href="standard_business.html">Business Standard Website</a></li>
+        <li><a href="starter_website.html">Starter Website Package</a></li>
+        <li><a href="beyond.html">Beyond the Build (Add-Ons)</a></li>
+      </ul>
+    </li>
+  </ul>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (menuToggle && navMenu) {
+      menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+      });
+
+      const navLinks = document.querySelectorAll('.nav-menu a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          if (!link.parentElement.classList.contains('dropdown') && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+          }
+        });
+      });
+
+      const dropdownToggles = document.querySelectorAll('.nav-menu .dropdown > a');
+      dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            const parentDropdown = this.parentElement;
+            parentDropdown.classList.toggle('open');
+          }
+        });
+      });
+    }
+  });
+</script>
+
+
+	<table width="90%" border="0" align="center" cellspacing="0" cellpadding="0" class="tableWidth">
+		<tr class="blak">
+			<td>
+				<table width="100%" border="0" align="center" cellspacing="1" cellpadding="0">
+					<tr>
+						<td colspan="6">
+							<table width="100%" border="0" align="center" cellspacing="0" cellpadding="10">
+								<tr>
+									<td id="pageContent">
+										<section id="starter-website-package">
+											<div class="page-intro-box">
+												<h1 style="color: #64ffda;">Starter Website Package</h1>
+												<p><strong>Investment: $1,000 (One-Time Design Fee)</strong></p>
+											</div>
+
+											<hr>
+
+											<div class="section-title">
+												<h2>Who is This For?</h2>
+											</div>
+											<p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">The Starter Website Package is meticulously crafted for solo owners, ambitious startups, and local businesses taking their first confident step online. If you need a professional, impactful online presence that clearly communicates who you are, what you do, and how to reach you, without the complexity of multiple pages, this package is your perfect launchpad. It’s designed to get you online quickly, efficiently, and affordably, making a strong first impression.</p>
+
+											<hr>
+
+											<div class="section-title">
+												<h2>What's Included (Your Project Checklist):</h2>
+											</div>
+											<p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">This section details everything you'll receive with your Starter Website Package.</p>
+
+											<div class="service-container">
+												<div class="service-content-cell">
+													<h3>Discovery & Planning:</h3>
+													<ul>
+														<li>Initial consultation to understand your business goals and audience.</li>
+														<li>Discussion of your brand identity, colors, fonts, and existing marketing materials.</li>
+														<li>Content guidance and recommendations for your single-page structure.</li>
+													</ul>
+												</div>
+											</div>
+
+											<div class="service-container">
+												<div class="service-content-cell">
+													<h3>Professional Design & Development:</h3>
+													<ul>
+														<li><strong>1-Page Site with Scrollable Sections:</strong> A beautifully designed, cohesive single-page website that intelligently organizes your key information into distinct, easy-to-navigate sections (e.g., About, Services, Contact).
+															<ul>
+																<li>Common sections include: Hero/Introduction, About Us/Our Story, Services/Offerings (summary), Contact Information (with simple form), Testimonials (optional), Call to Action.</li>
+															</ul>
+														</li>
+														<li><strong>Mobile-Optimized & Fast-Loading Design:</strong> Your website will look stunning and function flawlessly on all devices – desktops, laptops, tablets, and smartphones. We prioritize speed to ensure an excellent user experience and better search engine performance.</li>
+														<li><strong>Clean Layout with Client Branding:</strong> A modern, intuitive layout tailored to your brand's aesthetic. We integrate your logo, brand colors, and typography to ensure a consistent and professional online image.</li>
+														<li><strong>Essential User Interface Elements:</strong>
+															<ul>
+																<li>Clear navigation for scrollable sections.</li>
+																<li>Prominent call-to-action buttons.</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+											</div>
+
+											<div class="service-container">
+												<div class="service-content-cell">
+													<h3>Basic Search Engine Optimization (SEO) Foundations:</h3>
+													<ul>
+														<li><strong>Meta Title & Description Setup:</strong> We'll craft compelling and keyword-rich meta titles and descriptions for your single page to help search engines understand your site's content and encourage clicks from search results.</li>
+														<li><strong>Image Optimization:</strong> Basic optimization of images for faster loading times and better search engine visibility.</li>
+													</ul>
+												</div>
+											</div>
+
+											<div class="service-container">
+												<div class="service-content-cell">
+													<h3>Website Launch & Handoff:</h3>
+													<ul>
+														<li>Final review and approval process.</li>
+														<li>Deployment of your website to your chosen hosting platform.</li>
+														<li>Confirmation of site functionality and mobile responsiveness.</li>
+														<li>All sites are fully owned by the client.</li>
+														<li>All sites are built to convert visitors into customers.</li>
+														<li>All sites are custom-fit to your business goals.</li>
+													</ul>
+												</div>
+											</div>
+
+											<hr>
+
+											<div class="section-title">
+												<h2>Our Process (Your Step-by-Step Journey):</h2>
+											</div>
+											<p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">We believe in a collaborative and transparent process. Here's how we'll bring your Starter Website to life:</p>
+
+											<div class="approach-container">
+												<div class="approach-item">
+													<h4>1. Discovery Call & Quote:</h4>
+													<p>We start with a free consultation to discuss your vision, business, and needs. Based on this, we provide a detailed proposal and quote.</p>
+												</div>
+												<div class="approach-item">
+													<h4>2. Contract & Deposit:</h4>
+													<p>Once you approve the proposal, we sign a simple agreement, and a 50% deposit secures your project in our schedule.</p>
+												</div>
+												<div class="approach-item">
+													<h4>3. Content Collection:</h4>
+													<p>We'll provide a clear content guide and work with you to gather all necessary text, images, and brand assets for your site.</p>
+												</div>
+												<div class="approach-item">
+													<h4>4. Design & Initial Build:</h4>
+													<p>Based on our discussions, we'll design and build the first draft of your one-page website.</p>
+												</div>
+												<div class="approach-item">
+													<h4>5. Review & Revisions (1 Round):</h4>
+													<p>You'll receive a private link to review your site. We'll then collaborate on one round of revisions to fine-tune the design and content based on your feedback.</p>
+												</div>
+												<div class="approach-item">
+													<h4>6. Final Approval & Balance Payment:</h4>
+													<p>Once you're thrilled with your website, you'll give us final approval, and the remaining 50% balance will be due.</p>
+												</div>
+												<div class="approach-item">
+													<h4>7. Launch & Handover:</h4>
+													<p>We'll launch your website, ensuring everything is perfect. We'll provide you with login details and basic guidance for ownership.</p>
+												</div>
+											</div>
+
+											<hr>
+
+											<div class="section-title">
+												<h2>Optional Enhancements (Upgrade Your Online Presence):</h2>
+											</div>
+											<p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">While the Starter Website is robust on its own, consider these popular add-ons to further enhance your online presence (pricing varies based on complexity):</p>
+
+											<div class="service-container">
+												<div class="service-content-cell">
+													<h3>Logo Design or Full Visual Rebrand:</h3>
+													<p>Need a fresh, professional logo or a complete brand identity overhaul? We can help you establish a powerful visual foundation.</p>
+												</div>
+											</div>
+											<div class="service-container">
+												<div class="service-content-cell">
+													<h3>Custom Photos or Stock Image Licensing:</h3>
+													<p>Elevate your site's visuals with professional photography or curated stock images that perfectly match your brand.</p>
+												</div>
+											</div>
+											<div class="service-container">
+												<div class="service-content-cell">
+													<h3>Email Setup & Domain Migration:</h3>
+													<p>Assistance with setting up professional email addresses tied to your domain and seamlessly migrating existing domains.</p>
+												</div>
+											</div>
+											<div class="service-container">
+												<div class="service-content-cell">
+													<h3>Professional Copywriting / Content Refinement:</h3>
+													<p>If you need help crafting compelling, search-engine-friendly text for your site sections.</p>
+												</div>
+											</div>
+											<div class="service-container">
+												<div class="service-content-cell">
+													<h3>Social Media Integration:</h3>
+													<p>Links to your social media profiles.</p>
+												</div>
+											</div>
+
+											<hr>
+
+											<div class="section-title">
+												<h2>Monthly Services (Crucial for Client Success):</h2>
+											</div>
+											<p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">A website isn't a "set it and forget it" asset. To ensure your site remains secure, fast, and visible to your ideal customers, we offer these essential ongoing monthly services.</p>
+
+											<div class="service-container">
+												<div class="service-content-cell">
+													<h3>1. Website Hosting & Technical Support</h3>
+													<p><strong>Investment: Starting at $10/month</strong> (price varies based on traffic needs and site complexity)</p>
+													<h4>What's Included:</h4>
+													<ul>
+														<li><strong>Secure & Reliable Hosting:</strong> Your website lives on high-performance servers, ensuring maximum uptime and fast loading speeds for your visitors.</li>
+														<li><strong>SSL Certificate:</strong> An essential security layer (https://) encrypting data between your site and visitors, crucial for trust and SEO.</li>
+														<li><strong>Daily Backups:</strong> Regular automated backups of your entire website, so you never have to worry about data loss.</li>
+														<li><strong>Core Software Updates:</strong> We manage updates to your website's core platform (e.g., WordPress, Squarespace, godaddy) to ensure security and compatibility.</li>
+														<li><strong>Security Monitoring:</strong> Proactive monitoring to detect and prevent potential threats or vulnerabilities.</li>
+														<li><strong>Technical Support:</strong> Access to our team for any technical issues related to your website's functionality or hosting.</li>
+														<li>(Note: This does not include content updates or new feature development, though we are always happy to discuss upgrades with you!)</li>
+													</ul>
+												</div>
+											</div>
+
+											<div class="service-container">
+												<div class="service-content-cell">
+													<h3>2. Monthly SEO (Search Engine Optimization) Service</h3>
+													<p><strong>Investment: Averages at $150/month</strong> (Customized plans available based on goals)</p>
+													<h4>Why Monthly SEO is Crucial:</h4>
+													<p>While your Starter Website has basic SEO setup, ongoing SEO is what truly drives organic traffic, helps you rank higher, and connects you with customers actively searching for your services. Think of it as your ongoing marketing engine.</p>
+													<h4>What's Included (Basic Monthly SEO):</h4>
+													<ul>
+														<li><strong>Keyword Research & Monitoring:</strong> Ongoing research to identify new opportunities and track your current keyword performance.</li>
+														<li><strong>Content Optimization (for your existing page):</strong> Suggestions and light revisions to your page's content to improve keyword density and readability.</li>
+														<li><strong>Technical SEO Audit (Quarterly):</strong> Regular checks for site speed, mobile-friendliness, and other technical factors impacting SEO.</li>
+														<li><strong>Google My Business Optimization:</strong> For local businesses, optimizing and managing your Google My Business profile is key to local search visibility.</li>
+														<li><strong>Basic Analytics Reporting:</strong> Monthly reports on your website's traffic, search performance, and key metrics.</li>
+														<li><strong>Competitor Analysis (Basic):</strong> Understanding what your local competitors are doing in search.</li>
+														<li><strong>Strategy Call (Monthly/Bi-Monthly):</strong> A dedicated call to discuss performance, new opportunities, and future SEO strategies.</li>
+													</ul>
+												</div>
+											</div>
+
+											<div class="cta-section-box">
+												<h4>Ready to Get Started?</h4>
+												<p>Are you ready to establish your professional online presence with a powerful Starter Website? Contact us today for a free consultation! We'd love to learn about your business and discuss how this package can help you achieve your goals.</p>
+												<p class="fine-print">[Your Website Link/Contact Form Link] &nbsp; [Your Phone Number] &nbsp; [Your Email Address]</p>
+											</div>
+
+										</section>
+
+										</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+	<footer id="footer">
+		<p>© 2025 Mayteck C.S. - All Rights Reserved | Empowering Business Through Technology</p>
+	</footer>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const menuToggle = document.querySelector('.mobile-menu-toggle');
+			const navMenu = document.querySelector('.nav-menu');
+
+			if (menuToggle && navMenu) {
+				menuToggle.addEventListener('click', function () {
+					navMenu.classList.toggle('active');
+				});
+
+				const navLinks = document.querySelectorAll('.nav-menu a');
+				navLinks.forEach(link => {
+					link.addEventListener('click', function () {
+						// Only close if it's a direct link, not a dropdown toggle
+						if (!link.parentElement.classList.contains('dropdown') && navMenu.classList.contains('active')) {
+							navMenu.classList.remove('active');
+						}
+					});
+				});
+
+				// Handle dropdown toggling for mobile if it's a clickable element
+				const dropdownToggles = document.querySelectorAll('.nav-menu .dropdown > a');
+				dropdownToggles.forEach(toggle => {
+					toggle.addEventListener('click', function (e) {
+						// Prevent default link behavior if it's meant to open a dropdown
+						if (window.innerWidth <= 768) { // Only for mobile/tablet screen sizes
+							e.preventDefault();
+							const parentDropdown = this.parentElement;
+							parentDropdown.classList.toggle('open');
+						}
+					});
+				});
+			}
+		});
+	</script>
+
+</body>
+
+</html>

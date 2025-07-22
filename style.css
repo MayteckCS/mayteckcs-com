@@ -1,0 +1,1153 @@
+/* START OF FILE style.css --- CLEANED UP */
+@font-face {
+  font-family: 'Orbitron';
+  src: url('fonts/orbitron/Orbitron-Regular.woff2') format('woff2'),
+       url('fonts/orbitron/Orbitron-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Orbitron';
+  src: url('fonts/orbitron/Orbitron-Bold.woff2') format('woff2'),
+       url('fonts/orbitron/Orbitron-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  margin: 0 0 15px 0; /* Adjusted from original: combined initial margin:0 with later implied margin-bottom:15px */
+  padding: 0;
+  background: #0a192f url(images/tech_blue_pathways.jpg) no-repeat center center fixed;
+  background-size: cover;
+  color: #e6f1ff;
+  font-family: 'Open Sans', Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 900px;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-bg-section {
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: rgba(10, 25, 47, 0.5); Example if you want an overlay */
+}
+
+.bg-video {
+  /* position: absolute; /* If you want it to be a true background for .video-bg-section */
+  /* top: 0; left: 0; width: 100%; height: 100%; */
+  object-fit: cover;
+  z-index: 0; /* Or -1 if it's a true background behind other content in .video-bg-section */
+}
+
+/* Lightbox styles */
+#lightbox-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.8);
+  display: none; /* Shown via :target or JS */
+  align-items: center; /* For centering the image */
+  justify-content: center; /* For centering the image */
+  z-index: 9999;
+}
+
+#lightbox-overlay img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border: 5px solid #00cfff;
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.9);
+  transition: transform 0.3s ease;
+}
+
+#lightbox-overlay:target {
+  display: flex; /* Or block, depending on how you center the image */
+}
+
+.overlay-content { /* This seems like a general content box, might be used within sections */
+  position: relative; /* If it's a layer on top of something */
+  z-index: 2;
+  background-color: rgba(10, 25, 47, 0.85); /* Semi-transparent layer for readability */
+  padding: 40px;
+  margin: 20px auto; /* Added top/bottom margin for spacing */
+  max-width: 900px; /* Example max-width */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius: 8px; /* Added for consistency */
+}
+
+/* Dropdown */
+.nav-menu .dropdown {
+	position: relative;
+}
+
+.nav-menu .dropdown-menu {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+    right: auto;
+  list-style: none;
+	background-color: rgba(10, 25, 47, 0.98);
+	min-width: 240px;
+	box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+	border-radius: 4px;
+	z-index: 1000;
+    padding: 10px 0; /* Added padding for items */
+    margin-top: 0; /* Optional small gap */
+}
+
+.nav-menu .dropdown-menu a {
+	display: block;
+	padding: 10px 15px;
+	color: #e6f1ff;
+	font-size: 0.9em;
+	text-decoration: none;
+    white-space: nowrap; /* Prevent wrapping */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-menu .dropdown-menu a:hover {
+	background-color: #172a45;
+	color: #00cfff;
+}
+
+/* Make dropdown actually show when class 'open' is toggled (usually by JS) */
+.nav-menu .dropdown.open .dropdown-menu,
+.nav-menu .dropdown:hover .dropdown-menu { /* Common hover intent for desktop */
+	display: block;
+}
+
+/* FAQ Page Specific Styles */
+.faq-page .container h3 { /* Assuming .container is a common wrapper */
+    margin-top: 3rem;
+    font-size: 1.4rem;
+    color: #fff; /* Consider using #ccd6f6 or #e6f1ff for consistency */
+    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.9);
+}
+
+.faq-page p, .faq-page ul {
+    font-size: 1.1rem;
+    line-height: 1.75;
+    margin-bottom: 2rem;
+}
+
+.faq-page ul li {
+    margin-bottom: 1rem;
+    list-style-type: disc; /* Added for clarity */
+    margin-left: 20px; /* Indent list items */
+}
+
+/* Gallery grid enhancements */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+/* Tile wrapper for lightbox */
+.gallery-grid a {
+  background: #172a45; /* Darker background for contrast with image padding */
+  border-radius: 10px;
+  padding: 8px;
+  display: block;
+  box-shadow: 0 0 10px rgba(100, 255, 218, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-grid a:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(100, 255, 218, 0.3);
+}
+
+/* Image inside tile */
+.gallery-grid img {
+  width: 100%; /* Make image responsive within the anchor */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove bottom space */
+  border-radius: 6px;
+  background: #ffffff; /* Ensures transparency is visible if image has it */
+  padding: 4px; /* Small border effect around the image itself */
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* The following properties were duplicates or more verbose versions of the initial body style */
+/* margin: 0;  padding: 0;  margin-bottom: 15px;  margin-top: 0; */ /* Incorporated into main body */
+/* background: #0a192f; */ /* Redundant */
+/* background-image: url(images/tech_blue_pathways.jpg); */ /* Redundant */
+/* background-size: cover; */ /* Redundant */
+/* background-attachment: fixed; */ /* Redundant */
+/* font-family: 'Open Sans', Arial, sans-serif; */ /* Redundant */
+/* line-height: 1.6; */ /* Redundant */
+
+body, td { /* This rule applies font-size to body and td elements */
+	font-size: 15px; /* Note: body font-size might be overridden by more specific rules or rem units */
+}
+
+#header {
+	background-color: rgba(10, 25, 47, 0.95);
+	padding: 15px 0;
+	position: sticky;
+	top: 0;
+    z-index: 1000; /* Ensure header stays on top */
+	box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+	margin-bottom: 30px; /* Adjusted from 5% to a fixed value, adjust as needed */
+}
+
+.header-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */ /* Removed */
+    /* Add flex-wrap and align-items: flex-start for mobile if needed for stacking */
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
+    justify-content: flex-start; /* Aligns items to the start (left) */
+}
+
+.logo-container {
+    display: flex; /* To align logo and company name */
+    align-items: center;
+}
+
+.logo-container img {
+	height: 50px;
+	width: auto;
+	margin-right: 15px;
+}
+
+.company-name {
+    display: flex; /* To stack h1 and p */
+	flex-direction: column;
+}
+
+.company-name h1 {
+	margin: 0;
+	font-family: 'Orbitron', sans-serif;
+	font-weight: 700;
+	font-size: 1.5em;
+    color: #00cfff; /* Added color */
+	letter-spacing: 0.5px;
+}
+
+.company-name p {
+    margin: 0; /* Removed default margin */
+	font-size: 0.85em;
+	color: #8892b0;
+	font-weight: 400;
+}
+
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  margin-left: auto; /* This pushes the menu to the right on desktop */
+/*  right: 10px; /* Stick to the right edge */
+/*  width: 10%; /* Set width to 20% of the viewport */
+/*  min-width: 180px; /* Optional: prevent it from being too narrow on tiny screens */
+  background-color: rgba(10, 25, 47, 0.98);
+  padding: 10px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  z-index: 1001;
+  border-radius: 8px;
+  border-top: 1px solid #172a45;
+  list-style: none;
+}
+
+.nav-menu.active {
+  display: flex !important;
+}
+
+.nav-menu li {
+	margin-left: 25px;
+    position: relative; /* For dropdown positioning if used directly on li */
+}
+.nav-menu li:first-child {
+    margin-left: 0; /* Remove margin for the first item */
+}
+.nav-menu li a {
+  display: block;
+  padding: 10px 15px;
+  text-align: right;
+  color: #ccd6f6;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.nav-menu li a:hover {
+  background-color: #172a45;
+  color: #00cfff;
+}
+
+.nav-menu a {
+	color: #ccd6f6; /* Slightly softer than pure white for text */
+    text-decoration: none;
+	font-weight: 500;
+	font-size: 0.95em;
+	transition: color 0.3s ease;
+	padding-bottom: 5px; /* For the underline effect */
+    position: relative; /* For the ::after pseudo-element */
+}
+
+.nav-menu a:hover {
+    color: #00cfff;
+}
+
+.nav-menu a::after {
+	content: '';
+    display: block; /* Make it a block to control width/height */
+	width: 0;
+	height: 2px;
+    position: absolute; /* Position relative to the link */
+	bottom: 0;
+    left: 0; /* Start underline from the left */
+	background-color: #00cfff;
+	transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+	width: 100%;
+}
+
+.mobile-menu-toggle {
+  display: block; /* Always show the ☰ icon */
+  background: none;
+  border: none;
+  color: #00cfff;
+  font-size: 1.8em;
+  cursor: pointer;
+  z-index: 1100; /* Ensure it's above everything */
+  position: relative; /* Add this if it seems to vanish behind other elements */
+}
+
+#subTitle { /* This ID seems very specific, ensure it's used correctly in HTML */
+	background: #172a45;
+    color: #00cfff;
+    padding: 8px 15px; /* Added horizontal padding */
+    font-weight: 600;
+    border-radius: 4px; /* Optional styling */
+    margin-bottom: 20px; /* Spacing */
+}
+
+#siteNavigation a,
+#siteNavigation .current { /* Common styles for nav links and current item */
+	font-weight: bold;
+    color: #00cfff;
+    text-decoration: none; /* Moved from specific states */
+}
+
+/* #siteNavigation a:link,
+#siteNavigation a:visited {
+    /* color already set above, text-decoration too */
+/*
+}
+ */
+
+
+#siteNavigation .current {
+    background-color: #233554;
+    padding: 5px 10px; /* Example padding */
+    border-radius: 4px; /* Example radius */
+}
+
+#siteNavigation a:hover {
+	background-color: #172a45;
+    color: #00cfff; /* Already default, but good for specificity */
+    /* text-decoration: none; */ /* Already set */
+}
+
+#siteNavigation a:active {
+	background-color: #0a192f;
+    /* text-decoration: none; */ /* Already set */
+}
+
+/* General link styles - ensure these don't overly conflict with specific nav/button links */
+a:link {
+    text-decoration: underline;
+    color: #00cfff;
+}
+a:visited {
+    text-decoration: underline;
+    color: #8892b0;
+}
+a:hover {
+    text-decoration: underline;
+    color: #00cfff; /* Hover color often same as link color or brighter */
+}
+a:active {
+    text-decoration: underline;
+    color: #52d3c0; /* Slightly different active color */
+}
+
+#pageContent {
+	clear: both;
+	border-bottom: 6px solid #172a45;
+	padding: 30px 20px 20px 20px; /* Adjusted padding-top from original */
+	line-height: 1.65em;
+	background-image: url(images/digital_circuit_network.jpg);
+	background-blend-mode: multiply; /* Blends background-image with background-color */
+	background-repeat: repeat; /* Consider 'no-repeat' and 'background-size: cover' if it's a texture */
+	background-position: top right;
+	background-size: contain; /* Or 'cover', depending on desired effect */
+    background-color: rgba(23, 42, 69, 0.85); /* Moved from combined rule, specific to pageContent */
+}
+
+#pageContent, #siteNavigation { /* This rule seems to be setting a common background color */
+	background-color: rgba(23, 42, 69, 0.85); /* Note: #pageContent's bg color is set above too */
+                                                /* This will override the one above for #pageContent if it comes later.
+                                                   If #siteNavigation is inside #pageContent, this might not be necessary
+                                                   or structure needs review. Assuming #siteNavigation is separate. */
+}
+/* To clarify: If #siteNavigation needs this bg, and #pageContent has its own complex bg,
+   the above combined rule might be better split or #pageContent's specific bg set with !important
+   or ensure this rule comes before the more specific #pageContent background.
+   For now, I'll assume #pageContent's more complex background takes precedence.
+   So, this rule will effectively only set it for #siteNavigation if #pageContent has its own.
+   Let's apply it just to siteNavigation for now if pageContent is already handled.
+*/
+#siteNavigation {
+    background-color: rgba(23, 42, 69, 0.85);
+}
+
+
+.imgLeft  { float: left;   margin-right: 10px;  margin-bottom: 10px; }
+.imgRight { float: right;  margin-left: 10px;   margin-bottom: 10px; }
+
+hr {
+    border: none; /* Reset default border */
+    height: 1px;
+    color: #00cfff;  /* Fallback for older browsers */
+    background-color: #00cfff;
+    margin: 25px 0; /* Adjusted margin to be shorthand */
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    color: #00cfff; /* Common color */
+    font-weight: 700;
+}
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 400;
+}
+h3 { /* Common margin reset for headings */
+    margin: 0 0 0.5em 0; /* Example bottom margin, adjust as needed */
+    font-family: 'Orbitron', sans-serif;
+    color: #00cfff; /* Common color */
+    letter-spacing: 0.3px; /* Default letter-spacing, overridden below */
+}
+
+h4 { /* Common margin reset for headings */
+    margin: 0 0 0.5em 0; /* Example bottom margin, adjust as needed */
+    font-family: 'Orbitron', sans-serif;
+    color: #00cfff; /* Common color */
+    letter-spacing: 0.3px; /* Default letter-spacing, overridden below */
+}
+
+h1 { font-weight: 700;  font-size: 2.2em; letter-spacing: 0.5px; }
+h2 { font-weight: 600;  font-size: 1.6em; letter-spacing: 0.3px; }
+h3 { font-weight: 600;  font-size: 1.3em; letter-spacing: 0.3px; }
+h4 { font-weight: 600;  font-size: 1.18em; letter-spacing: 0.2px; }
+
+.blue-tagline {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 2.5em;
+    color: #007bff; /* Changed pure blue to a more common web blue, adjust if #0000FF is specific */
+    text-align: center;
+    margin: 40px auto; /* Added top margin */
+    max-width: 90%;
+    line-height: 1.4;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 30px 20px;
+    position: relative;
+    z-index: 1;
+    background: rgba(10, 25, 47, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-shadow:
+        0 0 1px #FFFFFF,  /* Thin white stroke */
+        0 0 5px rgba(0, 123, 255, 0.5),  /* Low opacity blue glow (matched to new blue) */
+        0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+.blue-tagline span {
+    display: block;
+    margin: 8px 0;
+}
+
+.header-image { /* A general container for an image, perhaps at top of sections */
+    text-align: center; /* Center the image if it's not full width */
+    margin: 30px 0;
+}
+
+.header-image img {
+    max-width: 80%;
+    height: auto; /* Maintain aspect ratio */
+    display: inline-block; /* To respect text-align: center */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    border-radius: 8px; /* Optional */
+}
+
+.blak { background-color: #172a45 !important; color: #e6f1ff !important; } /* Added color and !important if it's an override class */
+.hide { display: none !important; } /* !important is common for utility classes */
+.tableWidth { min-width: 400px; } /* Ensure table has a minimum width */
+
+.tblRegular {
+    width: 100%; /* Make table responsive by default */
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Spacing */
+}
+
+.tblRegular td, .tblRegular th { /* Apply to th as well */
+    padding: 8px 10px; /* Adjusted padding */
+    background-image: url(images/glowing_circuit_paths.jpg); /* This might be too busy for table cells */
+    background-size: cover;
+    border: 2px solid #233554;
+    color: #e6f1ff; /* Ensure text is readable on image */
+    text-align: left; /* Default alignment */
+}
+.tblRegular th { /* Header specific styles */
+    background: #233554; /* Override image for header */
+    color: #00cfff;
+    font-weight: 600;
+}
+
+.tblHeaderColor td, .tblHeaderColor th { /* If a row needs specific header color */
+    background: #233554 !important; /* Override image */
+    color: #00cfff;
+}
+
+.tblNoBorder td, .tblNoBorder th {
+    border: 0 !important; /* Override border */
+}
+
+.section-title {
+	text-align: center;
+	margin: 40px 0 30px; /* Adjusted bottom margin */
+    position: relative; /* For pseudo-element positioning */
+}
+
+.section-title h3 { /* Assuming h3 is used for section titles */
+	display: inline-block;
+	background-color: rgba(10, 25, 47, 0.9); /* Match body background for seamless look */
+	padding: 5px 20px; /* Adjust padding */
+    position: relative; /* To sit above the ::after line */
+	z-index: 1;
+    border-radius: 4px; /* Optional */
+}
+
+.section-title::after { /* Creates a line through the title */
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: #233554; /* Subtler line color */
+	transform: translateY(-50%);
+	z-index: 0; /* Behind the h3 background */
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: 45% 55%; /* Default: image left, content right */
+    gap: 0; /* No gap, image touches content cell */
+    margin-bottom: 40px;
+    background: rgba(23, 42, 69, 0.5);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.service-container.image-right {
+    grid-template-columns: 55% 45%; /* Content left, image right */
+}
+
+.service-container .service-image-cell {
+    grid-column: 1; /* Default: first column */
+    grid-row: 1;    /* Default: first row */
+}
+.service-container.image-right .service-image-cell {
+    grid-column: 2; /* If image-right, it's in the second column */
+}
+
+.service-container .service-content-cell {
+    grid-column: 2; /* Default: second column */
+    grid-row: 1;    /* Default: first row */
+    padding: 25px 30px; /* Adjusted padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content if desired */
+}
+.service-container.image-right .service-content-cell {
+    grid-column: 1; /* If image-right, content is in the first column */
+}
+
+.service-image-cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; /* Remove any extra space */
+}
+
+.approach-container {
+    display: flex;
+	flex-wrap: wrap;
+    gap: 20px; /* Use gap for spacing */
+	margin: 40px 0; /* Adjusted margin */
+    justify-content: center; /* Center items if they don't fill the row */
+}
+
+.approach-item {
+	flex: 1 1 280px; /* Allow items to grow and shrink, with a base of 280px */
+    max-width: 320px; /* Max width for items */
+	background: rgba(23, 42, 69, 0.7);
+	padding: 20px; /* Adjusted padding */
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Center content within items */
+}
+
+.approach-item:hover {
+	transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.approach-item img {
+    max-width: 100px; /* Control image size */
+    height: auto;
+	border-radius: 5px;
+	margin-bottom: 15px; /* Adjusted margin */
+}
+.approach-item h4 { /* Style heading within approach item */
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.contact-container { /* Wraps the entire contact section */
+	padding: 40px 20px; /* Increased padding */
+	margin-top: 20px;
+    background: rgba(10, 25, 47, 0.7); /* Subtle background */
+    border-radius: 8px;
+}
+
+.contact-content { /* Contains info and image/form */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Space between info and image/form */
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to top */
+}
+
+.contact-info {
+	flex: 1 1 45%; /* Allow to grow/shrink, base 45% */
+    min-width: 280px; /* Minimum width before wrapping */
+}
+.contact-info h3 {
+    margin-bottom: 20px;
+}
+.contact-info p {
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+.contact-image { /* Or .contact-form */
+	flex: 1 1 45%; /* Allow to grow/shrink, base 45% */
+    min-width: 280px; /* Minimum width */
+}
+
+.contact-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+#footer {
+	background-color: rgba(10, 25, 47, 0.9);
+    color: #8892b0; /* Footer text color */
+    padding: 30px 20px; /* Adjusted padding */
+    text-align: center;
+    margin-top: 40px; /* Space above footer */
+}
+#footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+#footer a {
+    color: #00cfff;
+}
+
+
+/* --- Responsive styles --- */
+
+@media screen and (max-width: 768px) {
+	.header-container {
+		width: 95%; /* Slightly more width on mobile */
+	}
+	
+	  .nav-menu { /* Mobile menu base styles */
+        display: none; /* Hidden by default */
+        position: absolute;
+        top: 70px; /* Height of the header, adjust if needed */
+        /* --- ADD/OVERRIDE THESE LINES FOR MOBILE SPECIFIC BEHAVIOR --- */
+        left: 0; /* Align to the left edge of the screen */
+        right: 0; /* Extend to the right edge of the screen, making it full width */
+        width: 100%; /* Make it full width */
+        min-width: unset; /* Important: Remove any min-width restriction */
+        border-radius: 0; /* Optional: Remove border-radius for full width menus */
+        /* --- END ADD/OVERRIDE --- */
+        
+        background-color: rgba(10, 25, 47, 0.98);
+        flex-direction: column;
+        padding: 10px 0;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+        z-index: 1001;
+        border-top: 1px solid #172a45;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 0;
+        width: 100%;
+        text-align: left; /* Align text to the left within menu items */
+    }
+    .nav-menu li a {
+        display: block;
+        padding: 15px 20px;
+        border-bottom: 1px solid #172a45;
+        text-align: left; /* Ensure sub-menu items align left */
+    }
+    .nav-menu li:last-child a {
+        border-bottom: none;
+    }
+    .nav-menu a::after { /* Disable underline effect on mobile menu */
+        display: none;
+    }
+
+    /* Ensure dropdown sub-menu also aligns left and flows correctly on mobile */
+    .nav-menu .dropdown-menu {
+        position: static; /* Make dropdown items flow normally in the mobile menu */
+        width: 100%; /* Full width */
+        box-shadow: none; /* Remove redundant shadow */
+        border-radius: 0; /* Remove radius */
+        padding: 0; /* Remove padding as list items have it */
+        margin: 0; /* Remove margin */
+        background-color: rgba(10, 25, 47, 0.9); /* Slightly different shade for distinction */
+        border-top: none; /* No top border */
+    }
+    .nav-menu .dropdown-menu a {
+        padding-left: 40px; /* Indent sub-menu items */
+        font-size: 0.9em; /* Slightly smaller font for sub-items */
+        border-bottom: 1px solid rgba(23, 42, 69, 0.5); /* Lighter border for sub-items */
+    }
+    .nav-menu .dropdown-menu li:last-child a {
+        border-bottom: none;
+    }
+    /* ... rest of your mobile styles ... */
+}
+
+.mobile-menu-toggle {
+    display: block; /* Always show the ☰ icon */
+    background: none;
+    border: none;
+    color: #00cfff;
+    font-size: 1.8em;
+    cursor: pointer;
+    z-index: 1100;
+    position: relative;
+    /* Add margin to separate it from logo/company name */
+    margin-right: 20px; /* Adjust as needed */
+}
+    
+	.service-container,
+	.service-container.image-right {
+		grid-template-columns: 1fr; /* Stack image and content vertically */
+		grid-template-rows: auto auto; /* Define rows for image and content */
+	}
+
+	.service-container .service-image-cell,
+	.service-container.image-right .service-image-cell {
+		grid-column: 1; /* Full width */
+		grid-row: 1;    /* Image first */
+        max-height: 300px; /* Limit image height on mobile */
+	}
+
+	.service-container .service-content-cell,
+	.service-container.image-right .service-content-cell {
+        grid-column: 1; /* Full width */
+		grid-row: 2;    /* Content second */
+        padding: 20px; /* Adjust padding for mobile */
+	}
+
+	.approach-item {
+		flex-basis: 48%; /* Two items per row, adjust with gap */
+        min-width: 0; /* Reset min-width to allow flex-basis to work with gap */
+		margin-bottom: 15px; /* Already handled by gap in .approach-container */
+	}
+    .approach-container {
+        gap: 15px; /* Reduce gap on smaller screens */
+    }
+
+
+	.contact-info,
+	.contact-image { /* Stack contact info and image/form */
+		flex-basis: 100%; /* Full width */
+	}
+
+	.contact-image {
+		margin-top: 20px; /* Add space if it was side-by-side */
+	}
+
+	.blue-tagline {
+		font-size: 2em;
+		padding: 20px 15px; /* Adjusted padding */
+	}
+
+    h1 { font-size: 1.8em; }
+    h2 { font-size: 1.4em; }
+    h3 { font-size: 1.2em; }
+
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px; /* Slightly smaller base font on very small screens */
+    }
+
+.header-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */ /* Removed */
+    /* Add flex-wrap and align-items: flex-start for mobile if needed for stacking */
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
+    justify-content: flex-start; /* Aligns items to the start (left) */
+    }
+ 
+    .company-name h1 {
+        font-size: 1.3em;
+    }
+    .company-name p {
+        font-size: 0.8em;
+    }
+
+	.blue-tagline {
+	    font-size: 1.6em; /* Further reduce tagline font size */
+	    padding: 15px 10px;
+        letter-spacing: 1px;
+	}
+    .blue-tagline span {
+        margin: 5px 0;
+    }
+
+    .approach-item {
+        flex-basis: 100%; /* One item per row on very small screens */
+    }
+
+    .service-container .service-content-cell {
+        padding: 15px;
+    }
+    .section-title h3 {
+        padding: 5px 10px;
+        font-size: 1.1em; /* Match h3 general reduction */
+    }
+    /* Any other very small screen adjustments */
+}
+
+/* Utility Classes (if not already present from inline styles) */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Call to Action Button (if not already present) */
+/* OPTION: Dark Button, Bright Text */
+
+/* Find the .cta-button in your style.css and replace it with this: */
+.cta-button {
+  display: inline-block;
+  text-align: center;
+  margin: 20px auto;
+  background-color: #172a45; /* A dark blue from your palette */
+  color: #00cfff;           /* Bright teal text for high contrast */
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0 20px rgba(100, 255, 218, 0.4); /* Still use the teal glow */
+  transition: all 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #233554; /* Slightly lighter dark blue on hover */
+  color: #00cfff;           /* Keep text bright teal on hover */
+  box-shadow: 0 0 30px rgba(100, 255, 218, 0.7);
+  transform: scale(1.05);
+}
+
+/* Modifier for a smaller CTA button */
+.cta-button-small {
+  font-size: 1em;
+  padding: 10px 22px;
+}
+
+
+/* Header Company Name Subtitle */
+.company-name h2 {
+  font-size: 0.95em; /* Adjust as needed */
+  font-weight: 500; /* Adjust as needed */
+  color: #a8b2d1;  /* Softer color */
+  margin: 3px 0 8px 0; /* Top, Right, Bottom, Left */
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+}
+
+
+/* Web Design Packages Page Specific Styles (within #web-packages section) */
+.page-intro-box {
+  background-color: rgba(23, 42, 69, 0.85);
+  padding: 30px 20px;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 40px auto 20px auto;
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.page-intro-box h3 {
+  margin: 0 0 15px 0; /* Added bottom margin */
+  color: #00cfff; /* Already global h3 color, but explicit here */
+  font-family: 'Montserrat', sans-serif; /* Already global h3 font, but explicit */
+  font-size: 2em; /* Larger than global h3 */
+}
+
+.page-intro-box p {
+  margin: 0; /* Removed top margin from original inline style */
+  font-size: 1.1em;
+  color: #e6f1ff;
+  line-height: 1.7;
+}
+
+/* Adjustments for service containers on the web-packages page */
+#web-packages .service-container {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: rgba(23, 42, 69, 0.8); /* Darker than global .service-container default */
+  /* display: grid and other layout properties are inherited from global .service-container */
+}
+
+#web-packages .service-content-cell h4 {
+  /* Global h4 styles will apply for color, font-family. Override size and margin: */
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 15px; /* Added for spacing */
+}
+
+#web-packages .service-content-cell ul {
+  padding-left: 20px; /* Standardized from 18px */
+  list-style-type: disc; /* Ensure bullets */
+  margin-top: 10px;
+  margin-bottom: 15px; /* Added for spacing */
+}
+
+#web-packages .service-content-cell li {
+  margin-bottom: 10px;
+  line-height: 1.7;
+}
+
+.fine-print {
+  font-size: 0.9em;
+  color: #8892b0;
+  margin-top: 15px; /* Add some space above */
+}
+
+.cta-section-box {
+  text-align: center;
+  padding: 40px 20px; /* Adjusted padding */
+  background-color: rgba(10, 25, 47, 0.35); /* Slightly adjusted alpha */
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 40px auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+/* --- Potentially modify global #footer in style.css --- */
+/* If you want the shadow and border on ALL footers, modify the existing #footer rule: */
+/*
+#footer {
+	background-color: rgba(10, 25, 47, 0.9);
+    color: #8892b0;
+    padding: 30px 20px; // Or 20px if preferred from webdesign.html
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.4); // ADDED
+    border-top: 1px solid #233554; // ADDED
+}
+#footer p {
+    margin: 0;
+    font-size: 0.9em; // Or 0.85em if preferred from webdesign.html
+}
+*/
+/* For this exercise, I'll assume you'll make these desired changes to your global #footer.
+   If not, and you only want them on webdesign.html, you'd need a more specific selector
+   like body.webdesign-page #footer (after adding a class to the body).
+*/
+/* END OF FILE style.css --- CLEANED UP */
+
+/* === FINAL DROPDOWN FIX === */
+
+/* === FINAL FIX: Desktop Dropdown Hover & Mobile Toggle === */
+
+/* Mobile styles first (default) */
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  margin-top: 10px;
+  background-color: rgba(10, 25, 47, 0.98);
+  padding: 10px 20px;
+  border-radius: 8px;
+  position: static;
+}
+
+.nav-menu.active {
+  display: flex;
+}
+
+.nav-menu li {
+  position: relative;
+  margin: 5px 0;
+}
+
+.nav-menu .dropdown-menu {
+  display: none;
+  flex-direction: column;
+  background-color: rgba(10, 25, 47, 0.95);
+  padding-left: 20px;
+}
+
+.nav-menu .dropdown.open .dropdown-menu {
+  display: flex;
+}
+
+/* Desktop-specific dropdown behavior */
+@media screen and (min-width: 769px) {
+  .nav-menu {
+    display: none;
+    position: absolute;
+    z-index:1000;
+    flex-direction: column;
+    background: none;
+    background-color: rgba(10, 25, 47, 0.98);
+    left: 15px;
+    padding: 10px 20px;
+  }
+
+  .nav-menu li {
+    margin: 0 12px;
+  }
+
+  .nav-menu .dropdown {
+    position: relative;
+  }
+
+  .nav-menu .dropdown-menu {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    top: 100%;
+    left: 0;
+    width: 220px;
+    list-style: none;
+    background-color: rgba(10, 25, 47, 0.98);
+    padding-left: 20px;
+    border-radius: 0px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    z-index: 9999;
+    margin: 0;
+  }
+
+  .nav-menu .dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+
+  .nav-menu .dropdown-menu a {
+    padding: 10px 15px;
+    white-space: nowrap;
+    display: block;
+    color: #ccd6f6;
+    list-style: none;
+  }
+
+  .nav-menu .dropdown-menu a:hover {
+    background-color: #172a45;
+    color: #00cfff;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+      position: absolute;
+  left: 15px; /* Adjust as needed for spacing */
+  font-size: 1.8em;
+  color: #00cfff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  }
+}
+
+/* Mobile menu toggle icon */
+@media screen and (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+    font-size: 1.8em;
+    background: none;
+    border: none;
+    color: #00cfff;
+    cursor: pointer;
+    margin-left: auto;
+  }
+}

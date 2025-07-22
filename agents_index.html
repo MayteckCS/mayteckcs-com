@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meet the Team | Mayteck C.S.</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    main {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .section-title h2 {
+      font-size: 2em;
+      color: #64ffda;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      font-size: 1.1em;
+      color: #a8b2d1;
+      margin-top: 0;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 30px;
+    }
+
+    .agent-card {
+      background-color: rgba(23, 42, 69, 0.9);
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 240px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      transition: transform 0.2s ease;
+    }
+
+    .agent-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .agent-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .agent-name {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #64ffda;
+    }
+
+    .agent-role {
+      font-size: 0.95em;
+      color: #a8b2d1;
+    }
+
+    .agent-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 0.9em;
+      color: #64ffda;
+      text-decoration: none;
+    }
+
+    .agent-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER copied from your main site -->
+<header id="header">
+  <div class="header-container">
+    <div class="logo-container">
+      <img src="images/MayteckCS_logo.png" alt="Mayteck C.S. Logo">
+      <div class="company-name">
+        <h1>Mayteck C.S.</h1>
+        <h2>Expert IT & AI Solutions for Local Businesses!</h2>
+        <p>Your trusted partner for strategic AI consulting, web support, and digital growth.</p>
+      </div>
+    </div>
+    <button class="mobile-menu-toggle" aria-label="Toggle Menu">☰</button>
+  <ul class="nav-menu" id="siteNavigation">
+    <li><a href="index.html#home">Home</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="agents_index.html">Meet the Team</a></li>
+    <li><a href="brand-architect-tool.html">Brand Builder Tool</a></li>
+	    <li class="dropdown">
+      <a href="pricing.html">Pricing &#9662;</a>
+      <ul class="dropdown-menu">
+        <li><a href="premium_website.html">Premium Website Package</a></li>
+        <li><a href="standard_business.html">Business Standard Website</a></li>
+        <li><a href="starter_website.html">Starter Website Package</a></li>
+        <li><a href="beyond.html">Beyond the Build (Add-Ons)</a></li>
+      </ul>
+    </li>
+  </ul>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (menuToggle && navMenu) {
+      menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+      });
+
+      const navLinks = document.querySelectorAll('.nav-menu a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          if (!link.parentElement.classList.contains('dropdown') && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+          }
+        });
+      });
+
+      const dropdownToggles = document.querySelectorAll('.nav-menu .dropdown > a');
+      dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            const parentDropdown = this.parentElement;
+            parentDropdown.classList.toggle('open');
+          }
+        });
+      });
+    }
+  });
+</script>
+        
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <div class="overlay-content">
+      <h1>Meet the Team</h1>
+      <p>Get to know the digital agents helping local businesses grow smarter, faster, and stronger.</p>
+    </div>
+
+    <div class="team-grid">
+      <div class="agent-card">
+        <img src="../images/jordan.png" alt="Jordan">
+        <div class="agent-name">Jordan</div>
+        <div class="agent-role">Digital Growth Advisor</div>
+        <a class="agent-link" href="jordan.html">View Profile →</a>
+      </div>
+      <div class="agent-card">
+        <img src="../images/morgan.png" alt="Morgan">
+        <div class="agent-name">Morgan</div>
+        <div class="agent-role">UX Design Consultant</div>
+        <a class="agent-link" href="morgan.html">View Profile →</a>
+      </div>
+      <div class="agent-card">
+        <img src="../images/riley.png" alt="Riley">
+        <div class="agent-name">Riley</div>
+        <div class="agent-role">Content Specialist</div>
+        <a class="agent-link" href="riley.html">View Profile →</a>
+      </div>
+      <div class="agent-card">
+        <img src="../images/casey.png" alt="Casey">
+        <div class="agent-name">Casey</div>
+        <div class="agent-role">SEO Strategist</div>
+        <a class="agent-link" href="casey.html">View Profile →</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <p>&copy; 2025 Mayteck C.S. – All Rights Reserved | Empowering Business Through Technology</p>
+  </footer>
+
+<!-- ADD TO BOTTOM JUST BEFORE </body> -- Mobile menu script (kept the more comprehensive one) -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (menuToggle && navMenu) {
+      menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+      });
+
+      const navLinks = document.querySelectorAll('.nav-menu a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          if (navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+          }
+        });
+      });
+    }
+  });
+</script>
+
+</body>
+</html>

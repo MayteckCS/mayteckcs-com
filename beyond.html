@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Explore Mayteck C.S.'s custom website enhancements and essential monthly services, including professional logo design, image and video creation, secure web hosting, and advanced monthly SEO strategies to elevate and maintain your digital presence." />
+	<meta name="keywords" content="website add-ons, web design enhancements, logo design, custom video, image creation, web hosting services, monthly SEO, search engine optimization, website support, digital growth, Mayteck C.S., Huntington Beach IT" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mayteck C.S. - Beyond the Build: Customization & Care</title>
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600&family=Raleway:wght@700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+<header id="header">
+  <div class="header-container">
+    <div class="logo-container">
+      <img src="images/MayteckCS_logo.png" alt="Mayteck C.S. Logo">
+      <div class="company-name">
+        <h1>Mayteck C.S.</h1>
+        <h2>Expert IT & AI Solutions for Local Businesses!</h2>
+        <p>Your trusted partner for strategic AI consulting, web support, and digital growth.</p>
+      </div>
+    </div>
+    <button class="mobile-menu-toggle" aria-label="Toggle Menu">☰</button>
+  <ul class="nav-menu" id="siteNavigation">
+    <li><a href="index.html#home">Home</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="agents_index.html">Meet the Team</a></li>
+    <li><a href="brand-architect-tool.html">Brand Builder Tool</a></li>
+	    <li class="dropdown">
+      <a href="pricing.html">Pricing &#9662;</a>
+      <ul class="dropdown-menu">
+        <li><a href="premium_website.html">Premium Website Package</a></li>
+        <li><a href="standard_business.html">Business Standard Website</a></li>
+        <li><a href="starter_website.html">Starter Website Package</a></li>
+        <li><a href="beyond.html">Beyond the Build (Add-Ons)</a></li>
+      </ul>
+    </li>
+  </ul>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (menuToggle && navMenu) {
+      menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+      });
+
+      const navLinks = document.querySelectorAll('.nav-menu a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          if (!link.parentElement.classList.contains('dropdown') && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+          }
+        });
+      });
+
+      const dropdownToggles = document.querySelectorAll('.nav-menu .dropdown > a');
+      dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            const parentDropdown = this.parentElement;
+            parentDropdown.classList.toggle('open');
+          }
+        });
+      });
+    }
+  });
+</script>
+
+
+<table width="90%" border="0" align="center" cellspacing="0" cellpadding="0" class="tableWidth">
+<tr class="blak">
+<td>
+	<table width="100%" border="0" align="center" cellspacing="1" cellpadding="0">
+	<tr>
+	<td colspan="6"> 
+		<table width="100%" border="0" align="center" cellspacing="0" cellpadding="10">
+		<tr> 
+		<td id="pageContent"> 
+<section id="beyond-the-build">
+    <div class="page-intro-box">
+        <h3>Beyond the Build: Your Customization & Care Catalog</h3>
+        <p>Your website is the foundation, but true online success often requires ongoing strategic support and custom enhancements. This catalog details our comprehensive range of optional, one-time services designed to make your site truly unique, and essential monthly services that ensure your digital presence remains secure, fast, and highly visible to your target audience. Think of these as the crucial investments that turn a great website into a powerful, sustainable growth engine for your business.</p>
+    </div>
+
+    <hr>
+
+    <div class="section-title">
+        <h2>One-Time Optional Enhancements</h2>
+    </div>
+    <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">These services are custom additions to your core website package, providing unique branding, content, and functionality.</p>
+
+    <div class="service-container">
+        <div class="service-content-cell">
+            <h3>1. Logo Design or Full Visual Rebrand</h3>
+            <p><strong>Investment: Price Varies (Custom Quote)</strong></p>
+            <p>Who is this for? Businesses launching a new brand, those needing a fresh, modern identity, or companies undergoing a complete visual overhaul.</p>
+            <h4>What's Included (Project Checklist):</h4>
+            <ul>
+                <li><strong>Discovery Session:</strong> In-depth discussion of your brand vision, values, target audience, and competitive landscape.</li>
+                <li><strong>Concept Development:</strong> Presentation of initial logo concepts or branding directions.</li>
+                <li><strong>Revision Rounds:</strong> Collaborative revisions to refine the chosen design until it perfectly represents your brand.</li>
+                <li><strong>Final Deliverables:</strong> Provision of final logo files in various formats (vector, web, print) and a basic brand guide outlining color palettes and typography.</li>
+                <li><strong>Brand Style Guide (Full Rebrand):</strong> Comprehensive document detailing brand guidelines, including logo usage, color codes, typography, imagery style, and more.</li>
+            </ul>
+        </div>
+        <div class="service-image-cell">
+            <img src="images/logo_design_placeholder.jpg" alt="Logo Design and Branding">
+        </div>
+    </div>
+
+    <div class="service-container image-right">
+        <div class="service-image-cell">
+            <img src="images/photo_video_creation_placeholder.jpg" alt="Custom Photo and Video Content">
+        </div>
+        <div class="service-content-cell">
+            <h3>2. Custom Photo & Video Content Creation</h3>
+            <p><strong>Investment: Price Varies (Custom Quote)</strong></p>
+            <p>Who is this for? Businesses wanting unique, high-quality visual assets that tell their story, showcase their products/services, and make a lasting impression.</p>
+            <h4>What's Included (Project Checklist):</h4>
+            <ul>
+                <li><strong>Creative Consultation:</strong> Discussion of your visual content needs, style preferences, and messaging goals.</li>
+                <li><strong>Photography Services:</strong>
+                    <ul>
+                        <li>Professional on-location or studio photoshoot tailored to your brand.</li>
+                        <li>High-resolution edited images suitable for web and marketing materials.</li>
+                        <li>Image licensing (if applicable for stock photos).</li>
+                    </ul>
+                </li>
+                <li><strong>Video Production Services:</strong>
+                    <ul>
+                        <li>Development of video concepts and storyboarding for short videos (e.g., banners, backgrounds, testimonials).</li>
+                        <li>Professional filming and editing of 3 short custom videos.</li>
+                        <li>Optimization of videos for web display (fast loading, various formats).</li>
+                    </ul>
+                </li>
+                <li><strong>Asset Delivery:</strong> Provision of all final photo and video files.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="service-container">
+        <div class="service-content-cell">
+            <h3>3. Email Setup & Domain Migration</h3>
+            <p><strong>Investment: Price Varies (Custom Quote)</strong></p>
+            <p>Who is this for? Businesses needing professional email addresses associated with their domain or requiring assistance transferring their existing domain to new hosting.</p>
+            <h4>What's Included (Project Checklist):</h4>
+            <ul>
+                <li><strong>Email Account Setup:</strong> Configuration of professional email accounts (e.g., info@yourbusiness.com) via preferred provider (e.g., Google Workspace, Microsoft 365, or hosting-provided email).</li>
+                <li><strong>Email Client Configuration:</strong> Guidance on setting up email accounts on desktop clients (Outlook, Mac Mail) and mobile devices.</li>
+                <li><strong>Domain Migration Management:</strong> Seamless transfer of your existing domain name to your new hosting provider or DNS management for proper site pointing.</li>
+                <li><strong>DNS Configuration:</strong> Expert management of Domain Name System (DNS) records to ensure all services (website, email) function correctly.</li>
+                <li><strong>Testing & Verification:</strong> Confirmation that all email and domain services are fully operational.</li>
+            </ul>
+        </div>
+        <div class="service-image-cell">
+            <img src="images/email_domain_placeholder.jpg" alt="Email Setup and Domain Migration">
+        </div>
+    </div>
+
+    <div class="service-container image-right">
+        <div class="service-image-cell">
+            <img src="images/copywriting_placeholder.jpg" alt="Professional Copywriting and Content Refinement">
+        </div>
+        <div class="service-content-cell">
+            <h3>4. Professional Copywriting / Content Refinement</h3>
+            <p><strong>Investment: Price Varies (Custom Quote)</strong></p>
+            <p>Who is this for? Businesses that need compelling, conversion-focused, and SEO-friendly text for their website pages, blog, or marketing materials.</p>
+            <h4>What's Included (Project Checklist):</h4>
+            <ul>
+                <li><strong>Content Strategy & Tone of Voice:</strong> Discussion of your brand's messaging, target audience, and desired tone.</li>
+                <li><strong>Copywriting Services:</strong> Creation of engaging and persuasive website copy for specific pages or sections.</li>
+                <li><strong>Content Polishing & Editing:</strong> Professional review and refinement of your existing content for clarity, impact, grammar, and SEO.</li>
+                <li><strong>SEO Integration:</strong> Strategic inclusion of keywords and optimization for readability to improve search engine visibility.</li>
+                <li><strong>Call-to-Action (CTA) Optimization:</strong> Crafting clear and compelling calls-to-action to guide visitor behavior.</li>
+                <li><strong>Revision Rounds:</strong> Collaborative revisions to ensure the content perfectly aligns with your brand and goals.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="service-container">
+        <div class="service-content-cell">
+            <h3>5. Advanced Forms & Tool Integrations</h3>
+            <p><strong>Investment: Price Varies (Custom Quote)</strong></p>
+            <p>Who is this for? Businesses seeking to streamline operations, capture detailed data, or automate processes directly through their website.</p>
+            <h4>What's Included (Project Checklist):</h4>
+            <ul>
+                <li><strong>Requirements Gathering:</strong> Detailed discussion of specific integration needs (e.g., CRM, newsletter, calendar, booking systems, advanced calculators).</li>
+                <li><strong>Complex Form Development:</strong> Design and implementation of multi-step forms, conditional logic forms, or advanced lead capture forms.</li>
+                <li><strong>Third-Party Tool Integration:</strong> Seamless connection and configuration of your website with tools like CRM systems, email marketing platforms (e.g., Mailchimp, Constant Contact), scheduling apps (e.g., Calendly, Acuity), or specific industry software.</li>
+                <li><strong>Data Flow Testing:</strong> Thorough testing to ensure data is correctly captured and transferred between your website and integrated tools.</li>
+                <li><strong>User Training:</strong> Basic guidance on how to manage and access data from the integrated tools via the website.</li>
+            </ul>
+        </div>
+        <div class="service-image-cell">
+            <img src="images/forms_integrations_placeholder.jpg" alt="Advanced Forms and Integrations">
+        </div>
+    </div>
+
+    <div class="service-container image-right">
+        <div class="service-image-cell">
+            <img src="images/ecommerce_placeholder.jpg" alt="E-commerce Integration">
+        </div>
+        <div class="service-content-cell">
+            <h3>6. E-commerce Integration (Product Display to Full Store)</h3>
+            <p><strong>Investment: Price Varies (Custom Quote)</strong></p>
+            <p>Who is this for? Businesses that want to sell products or services directly from their website, ranging from simple product showcases to full online stores.</p>
+            <h4>What's Included (Project Checklist):</h4>
+            <ul>
+                <li><strong>Product Showcase (Basic):</strong> Integration of functionality to display products with descriptions, images, and basic inquiry forms (without direct sales).</li>
+                <li><strong>Full E-commerce Store Setup:</strong>
+                    <ul>
+                        <li>Platform selection and setup (e.g., WooCommerce, Shopify).</li>
+                        <li>Product upload and categorization.</li>
+                        <li>Payment gateway integration (e.g., Stripe, PayPal).</li>
+                        <li>Shipping configuration and tax settings.</li>
+                        <li>Inventory management setup.</li>
+                        <li>Basic order management system.</li>
+                    </ul>
+                </li>
+                <li><strong>Security & SSL:</strong> Ensures secure transactions and data handling.</li>
+                <li><strong>User Training:</strong> Guidance on managing products, orders, and store settings.</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="section-title">
+        <h2>Ongoing Monthly Services</h2>
+    </div>
+    <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">These essential monthly services provide the critical support, security, and visibility your website needs to thrive and deliver continuous results.</p>
+
+    <div class="service-container">
+        <div class="service-content-cell">
+            <h3>1. Website Hosting & Technical Support</h3>
+            <p><strong>Ensure Your Website is Always Online, Fast, and Secure.</strong></p>
+            <h4>Investment Tiers:</h4>
+            <ul>
+                <li><strong>Basic Hosting (Ideal for Starter Websites):</strong> Starting at $15/month</li>
+                <li><strong>Standard Hosting (Ideal for Standard Business Sites):</strong> Starting at $25/month</li>
+                <li><strong>Premium Hosting (Ideal for Premium Website Packages):</strong> Starting at $50/month</li>
+            </ul>
+            <h4>What's Included Across All Tiers:</h4>
+            <ul>
+                <li><strong>Secure & Reliable Hosting:</strong> Your website resides on high-performance servers, guaranteeing maximum uptime and fast loading speeds for your visitors.</li>
+                <li><strong>SSL Certificate:</strong> An essential security layer (https://) encrypting data between your site and visitors, crucial for trust and SEO.</li>
+                <li><strong>Daily Backups:</strong> Regular automated backups of your entire website, providing peace of mind against data loss.</li>
+                <li><strong>Core Software Updates:</strong> We manage updates to your website's core platform (e.g., WordPress, Webflow, Squarespace) to ensure security and compatibility.</li>
+                <li><strong>Security Monitoring:</strong> Proactive monitoring to detect and prevent potential threats or vulnerabilities.</li>
+                <li><strong>Technical Support:</strong> Access to our team for any technical issues related to your website's functionality or hosting. (Note: This does not include content updates or new feature development.)</li>
+            </ul>
+            <h4>Tier-Specific Enhancements:</h4>
+            <ul>
+                <li><strong>Standard & Premium:</strong> Enhanced server resources, potentially more frequent backups, and advanced security protocols.</li>
+                <li><strong>Premium:</strong> Often includes dedicated resources, real-time monitoring, a staging environment for testing, and priority 24/7 technical support.</li>
+            </ul>
+        </div>
+        <div class="service-image-cell">
+            <img src="images/hosting_placeholder.jpg" alt="Website Hosting and Technical Support">
+        </div>
+    </div>
+
+    <div class="service-container image-right">
+        <div class="service-image-cell">
+            <img src="images/seo_placeholder.jpg" alt="Monthly SEO and Growth Strategy">
+        </div>
+        <div class="service-content-cell">
+            <h3>2. Monthly SEO (Search Engine Optimization) Service</h3>
+            <p><strong>Attract More Customers & Rank Higher in Search Results.</strong></p>
+            <h4>Investment Tiers:</h4>
+            <ul>
+                <li><strong>Basic SEO (Ideal for Starter Websites):</strong> Starting at $250/month</li>
+                <li><strong>Comprehensive SEO (Ideal for Standard Business Sites):</strong> Starting at $500/month</li>
+                <li><strong>Advanced Growth SEO (Ideal for Premium Website Packages):</strong> Starting at $750/month</li>
+            </ul>
+            <h4>Why Monthly SEO is Crucial:</h4>
+            <p>While your website is built with SEO foundations, ongoing SEO is the continuous marketing effort that drives organic traffic, improves your search engine rankings, and connects you with customers actively searching for your services. It's your long-term growth engine.</p>
+            <h4>What's Included (Across Tiers - Scaled by Investment):</h4>
+            <ul>
+                <li><strong>Keyword Research & Monitoring:</strong> Ongoing identification of high-value keywords relevant to your business and tracking of your current keyword performance.</li>
+                <li><strong>On-Page Content Optimization:</strong> Regular suggestions and revisions to your page's content, meta titles, and descriptions to improve keyword density, readability, and user intent.</li>
+                <li><strong>Technical SEO Audits:</strong> Periodic checks for site speed, mobile-friendliness, crawl errors, and other technical factors impacting SEO, with remediation of issues.</li>
+                <li><strong>Google My Business Optimization:</strong> For local businesses, active optimization and management of your Google My Business profile for strong local search visibility.</li>
+                <li><strong>Analytics & Performance Reporting:</strong> Monthly reports on your website's traffic, search performance, user behavior, and key metrics, with actionable insights.</li>
+                <li><strong>Competitor Analysis:</strong> Understanding and monitoring what your competitors are doing in search.</li>
+                <li><strong>Strategy Calls:</strong> Dedicated calls (monthly or bi-monthly) to review performance, discuss new opportunities, and refine your ongoing SEO strategy.</li>
+            </ul>
+            <h4>Tier-Specific Enhancements:</h4>
+            <ul>
+                <li><strong>Comprehensive & Advanced:</strong> Includes strategic link building, advanced structured data implementation, more frequent technical audits, in-depth conversion rate optimization (CRO) suggestions, and broader competitor analysis.</li>
+                <li><strong>Advanced Growth:</strong> Focuses on aggressive link acquisition, detailed user journey analysis, A/B testing for conversions, voice search optimization, and tailored strategic growth planning.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="cta-section-box">
+        <h4>Ready to Elevate Your Online Presence?</h4>
+        <p>Whether you're looking for a one-time enhancement or ongoing strategic support, we're here to help your business thrive online.</p>
+        <a href="index.html#contact" class="cta-button">Contact Us Today for a Free Consultation!</a>
+    </div>
+
+</section>
+
+</td>
+		</tr>
+		</table>
+	</td>
+	</tr>
+	</table>
+</td>
+</tr>
+</table>
+
+<footer id="footer">
+    <p>© 2025 Mayteck C.S. - All Rights Reserved | Empowering Business Through Technology</p>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (menuToggle && navMenu) {
+      menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+      });
+
+      const navLinks = document.querySelectorAll('.nav-menu a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          // Only close if it's a direct link, not a dropdown toggle
+          if (!link.parentElement.classList.contains('dropdown') && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+          }
+        });
+      });
+      
+      // Handle dropdown toggling for mobile if it's a clickable element
+      const dropdownToggles = document.querySelectorAll('.nav-menu .dropdown > a');
+      dropdownToggles.forEach(toggle => {
+          toggle.addEventListener('click', function(e) {
+              // Prevent default link behavior if it's meant to open a dropdown
+              if (window.innerWidth <= 768) { // Only for mobile/tablet screen sizes
+                  e.preventDefault();
+                  const parentDropdown = this.parentElement;
+                  parentDropdown.classList.toggle('open');
+              }
+          });
+      });
+    }
+  });
+</script>
+
+</body>
+
+</html>

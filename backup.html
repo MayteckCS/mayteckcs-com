@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backup Solutions - Mayteck C.S.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600&family=Raleway:wght@700;800;900&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="style.css"> 
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0a192f url('images/tech_blue_pathways.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #e6f1ff;
+            font-family: 'Open Sans', Arial, sans-serif;
+            line-height: 1.6;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #e6f1ff;
+            font-weight: 500;
+        }
+        nav a:hover {
+            color: #64ffda;
+        }
+        .section {
+            max-width: 960px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(10, 25, 47, 0.85);
+            border-radius: 10px;
+        }
+
+        .section img {
+            max-width: 100%;
+			max-height: 50%;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        footer p {
+            color: #8892b0;
+            font-size: 0.9em;
+        }
+    </style>
+
+</head>
+<body>
+
+<header id="header">
+  <div class="header-container">
+    <div class="logo-container">
+      <img src="images/MayteckCS_logo.png" alt="Mayteck C.S. Logo">
+      <div class="company-name">
+        <h1>Mayteck C.S.</h1>
+        <h2>Expert IT & AI Solutions for Local Businesses!</h2>
+        <p>Your trusted partner for strategic AI consulting, web support, and digital growth.</p>
+      </div>
+    </div>
+    <button class="mobile-menu-toggle" aria-label="Toggle Menu">☰</button>
+  <ul class="nav-menu" id="siteNavigation">
+    <li><a href="index.html#home">Home</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="agents_index.html">Meet the Team</a></li>
+    <li><a href="brand-architect-tool.html">Brand Builder Tool</a></li>
+	    <li class="dropdown">
+      <a href="pricing.html">Pricing &#9662;</a>
+      <ul class="dropdown-menu">
+        <li><a href="premium_website.html">Premium Website Package</a></li>
+        <li><a href="standard_business.html">Business Standard Website</a></li>
+        <li><a href="starter_website.html">Starter Website Package</a></li>
+        <li><a href="beyond.html">Beyond the Build (Add-Ons)</a></li>
+      </ul>
+    </li>
+  </ul>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (menuToggle && navMenu) {
+      menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+      });
+
+      const navLinks = document.querySelectorAll('.nav-menu a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          if (!link.parentElement.classList.contains('dropdown') && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+          }
+        });
+      });
+
+      const dropdownToggles = document.querySelectorAll('.nav-menu .dropdown > a');
+      dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            const parentDropdown = this.parentElement;
+            parentDropdown.classList.toggle('open');
+          }
+        });
+      });
+    }
+  });
+</script>
+
+<div class="section">
+    <h2>3-2-1 Backup Strategy</h2>
+    <p>Keep 3 copies of your data — 2 onsite (e.g. PC and NAS) and 1 offsite (e.g. cloud). This protects your data from physical damage, hardware failure, and cyber threats.</p>
+</div>
+
+<div class="section">
+    <h2>Cloud Backup Integration</h2>
+    <p>We configure encrypted cloud backups to services like Backblaze, Wasabi, or AWS. You’ll enjoy peace of mind with daily snapshots and version control.</p>
+    <img src="images/futuristic_server_room.jpg" alt="Cloud Backup Server">
+</div>
+
+<div class="section">
+    <h2>Local NAS Setup & Support</h2>
+    <p>On-premise backups using Synology or QNAP systems give fast, local restore access. We manage setup, permissions, and monitoring.</p>
+    <img src="images/NAS_rack.webp" alt="NAS Device Setup">
+</div>
+
+<div class="section">
+    <h2>Automated Backup Scheduling</h2>
+    <p>Daily, weekly, or real-time backups — whatever your workflow requires. We build automated tasks to keep your system protected without interruption.</p>
+    <img src="images/digital_circuit_network.jpg" alt="Automation Workflow">
+</div>
+
+<div class="section">
+    <h2>Disaster Recovery Planning</h2>
+    <p>Fire, flood, theft? Our recovery playbooks and offsite strategies ensure your business can resume operations fast with minimal loss.</p>
+    <img src="images/modern_office.jpg" alt="Recovery Strategy">
+</div>
+
+<div class="section">
+    <h2>Real-Time Monitoring & Alerts</h2>
+    <p>We use smart dashboards and monitoring tools to ensure backup jobs complete successfully. If anything fails, we know — and act — before you even notice.</p>
+    <img src="images/vibrant_network_hub.jpg" alt="Real-Time Alerts">
+</div>
+
+<footer>
+    <p>&copy; 2025 Mayteck C.S. | Expert IT & AI Solutions</p>
+</footer>
+<!-- ADD TO BOTTOM JUST BEFORE </body> -- Mobile menu script (kept the more comprehensive one) -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (menuToggle && navMenu) {
+      menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+      });
+
+      const navLinks = document.querySelectorAll('.nav-menu a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          if (navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+          }
+        });
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
