@@ -166,29 +166,35 @@
   <!-- MAIN GALLERY -->
 <div class="gallery-container">
   <h2>Marina Vikings Gallery</h2>
-  <div class="gallery-grid">
-    <a href="images/marina/marina_vikings_03.jpeg" class="lightbox-link"><img src="images/marina/marina_vikings_03.jpeg" alt="03"></a>
-    <a href="images/marina/marina_vikings_02.png" class="lightbox-link"><img src="images/marina/marina_vikings_02.png" alt="01"></a>
-    <a href="images/marina/Watermark_01.png" class="lightbox-link"><img src="images/marina/Watermark_01.png" alt="Watermark 01"></a><a href="images/marina/download.jpeg" class="lightbox-link"><img src="images/marina/download.jpeg" alt="Download"></a>
-    <a href="images/marina/Marina_Football_8bit.jpeg" class="lightbox-link"><img src="images/marina/Marina_Football_8bit.jpeg" alt="Football 8bit"></a>
-    <a href="images/marina/MArina_sponsor_watermark.jpeg" class="lightbox-link"><img src="images/marina/MArina_sponsor_watermark.jpeg" alt="Sponsor Watermark 1"></a>
-    <a href="images/marina/MArina_sponsor_watermark2.jpeg" class="lightbox-link"><img src="images/marina/MArina_sponsor_watermark2.jpeg" alt="Sponsor Watermark 2"></a>
-    <a href="images/marina/MArina_sponsor_watermark3.jpeg" class="lightbox-link"><img src="images/marina/MArina_sponsor_watermark3.jpeg" alt="Sponsor Watermark 3"></a>
-    <a href="images/marina/MArina_sponsor_watermark4.jpeg" class="lightbox-link"><img src="images/marina/MArina_sponsor_watermark4.jpeg" alt="Sponsor Watermark 4"></a>
-    <a href="images/marina/MArina_sponsor_watermark5.jpeg" class="lightbox-link"><img src="images/marina/MArina_sponsor_watermark5.jpeg" alt="Sponsor Watermark 5"></a>
-    <a href="images/marina/MArina_sponsor_watermark6.jpeg" class="lightbox-link"><img src="images/marina/MArina_sponsor_watermark6.jpeg" alt="Sponsor Watermark 6"></a>
-    <a href="images/marina/MArina_sponsor_watermark7.jpeg" class="lightbox-link"><img src="images/marina/MArina_sponsor_watermark7.jpeg" alt="Sponsor Watermark 7"></a>
-    <a href="images/marina/Marina_Viking.jpg" class="lightbox-link"><img src="images/marina/Marina_Viking.jpg" alt="Viking"></a>
-    <a href="images/marina/marina_vikings_01.png" class="lightbox-link"><img src="images/marina/marina_vikings_01.png" alt="02"></a>
-    <a href="images/marina/marina_vikings_04.jpeg" class="lightbox-link"><img src="images/marina/marina_vikings_04.jpeg" alt="04"></a>
-    <a href="images/marina/marina_vikings_05.jpeg" class="lightbox-link"><img src="images/marina/marina_vikings_05.jpeg" alt="05"></a>
-    <a href="images/marina/marina_vikings_06.jpeg" class="lightbox-link"><img src="images/marina/marina_vikings_06.jpeg" alt="06"></a>
-    <a href="images/marina/marina_vikings_07.jpeg" class="lightbox-link"><img src="images/marina/marina_vikings_07.jpeg" alt="07"></a>
-    <a href="images/marina/marina_vikings_08.jpeg" class="lightbox-link"><img src="images/marina/marina_vikings_08.jpeg" alt="08"></a>
-    <a href="images/marina/marina_vikings_11.jpeg" class="lightbox-link"><img src="images/marina/marina_vikings_11.jpeg" alt="11"></a>
-    <a href="images/marina/May 22, 2025, 11_04_55 AM.png" class="lightbox-link"><img src="images/marina/May 22, 2025, 11_04_55 AM.png" alt="Timestamp"></a>
-    
-  </div>
+  <div class="gallery-grid" id="dynamic-gallery"></div>
+
+<script>
+  fetch('images/marina/marina_images.json')
+    .then(res => res.json())
+    .then(images => {
+      const gallery = document.getElementById('dynamic-gallery');
+      images.forEach(path => {
+        const a = document.createElement('a');
+        a.href = path;
+        a.className = 'lightbox-link';
+        a.innerHTML = `<img src="${path}" alt="">`;
+        gallery.appendChild(a);
+      });
+
+      // Lightbox
+      document.querySelectorAll('.lightbox-link').forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          const src = this.getAttribute('href');
+          const overlay = document.getElementById('lightbox-overlay');
+          const img = document.getElementById('lightbox-img');
+          img.src = src;
+          overlay.style.display = 'flex';
+        });
+      });
+    });
+</script>
+
 </div>
 
 
@@ -235,4 +241,5 @@
   });
 </script>
 </body>
+
 </html>
