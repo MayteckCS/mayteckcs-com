@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write  # ✅ Required to allow git push
+  contents: write
 
 jobs:
   generate-json:
@@ -16,11 +16,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Generate marina_images.json
+      - name: Generate marina_images.json sorted by last-modified
         run: |
           mkdir -p images/marina
           find images/marina -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.webp" -o -iname "*.gif" \) \
+            -printf '%T@ %p\n' \
             | sort -r \
+            | cut -d' ' -f2- \
             | jq -R -s -c 'split("\n") | map(select(length > 0))' \
             > images/marina/marina_images.json
 
