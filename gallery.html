@@ -178,7 +178,7 @@
         a.href = path;
         a.className = 'lightbox-link';
         a.innerHTML = `<img src="${path}" alt="">`;
-        gallery.appendChild(a);
+        gallery.prepend(a);
       });
 
       // Lightbox
@@ -243,3 +243,4 @@
 </body>
 
 </html>
+
